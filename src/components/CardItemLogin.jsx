@@ -1,0 +1,50 @@
+import React from 'react';
+import { LoginSignup } from '../pages/LoginSignup'
+
+function CardItemLogin() {
+
+  const cardsData = [
+    {
+      imgSrc: "https://picsum.photos/300/200",
+      imgAlt: 'User',
+      title: 'User',
+      description: 'Description of User',
+      loginbutton: 'Login'
+    },
+    {
+      imgSrc: "https://picsum.photos/300/200",
+      imgAlt: 'Volunteer',
+      title: 'Volunteer',
+      description: 'Description of Volunteer',
+      loginbutton: 'Login',
+      signupbutton: 'Sign Up'
+    },
+    {
+      imgSrc: "https://picsum.photos/300/200",
+      imgAlt: 'Admin',
+      title: 'Admin',
+      description: 'Description of Admin',
+      loginbutton: 'Login',
+      signupbutton: 'Sign Up'
+    },
+
+    {
+        imgSrc: "https://picsum.photos/300/200",
+        imgAlt: 'Counsellor',
+        title: 'Counsellor',
+        description: 'Description of Counsellor',
+        loginbutton: 'Login',
+      }
+
+  ]
+
+  return (
+    <div className="card-wrapper">
+      {cardsData.map((card, index) => (
+        <LoginSignup key={index} {...card} />
+      ))}
+    </div>
+  );
+};
+
+export default CardItemLogin;
