@@ -16,7 +16,7 @@ export const registerAdmin = createAsyncThunk(
   'admin/register',
   async (admin, thunkAPI) => {
     try {
-      return await adminService.register(admin)
+      return await adminService.registerAdmin(admin)
     } catch (error) {
       return thunkAPI.rejectWithValue(extractErrorMessage(error))
     }
@@ -26,7 +26,7 @@ export const registerAdmin = createAsyncThunk(
 // Login admin
 export const loginAdmin = createAsyncThunk('admin/login', async (admin, thunkAPI) => {
   try {
-    return await adminService.login(admin)
+    return await adminService.loginAdmin(admin)
   } catch (error) {
     return thunkAPI.rejectWithValue(extractErrorMessage(error))
   }
@@ -34,7 +34,7 @@ export const loginAdmin = createAsyncThunk('admin/login', async (admin, thunkAPI
 
 // Logout user
 export const logoutAdmin = createAction('admin/logout', () => {
-  adminService.logout()
+  adminService.logoutAdmin()
   return {}
 })
 

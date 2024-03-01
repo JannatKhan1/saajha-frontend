@@ -5,7 +5,7 @@ import {RiAdminFill} from 'react-icons/ri'
 import { useSelector, useDispatch } from 'react-redux'
 import { loginAdmin } from '../../features/admins/adminSlice'
 import Spinner from '../../components/Spinner'
-import AdminHeader from '../../components/Admin/AdminHeader'
+import { Navbar } from '../../components/Navbar'
 
 function AdminLogin() {
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ function AdminLogin() {
 
   return (
     <>
-    <AdminHeader/>
+    <Navbar/>
       <section className='heading'>
         <h1>
           <RiAdminFill /> Admin Login

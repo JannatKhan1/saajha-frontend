@@ -5,7 +5,7 @@ import { GrUserAdmin } from 'react-icons/gr'
 import { useSelector, useDispatch } from 'react-redux'
 import { registerAdmin } from '../../features/admins/adminSlice'
 import Spinner from '../../components/Spinner'
-import AdminHeader from '../../components/Admin/AdminHeader'
+import { Navbar } from '../../components/Navbar'
 
 function AdminRegister() {
   const [formData, setFormData] = useState({
@@ -13,9 +13,9 @@ function AdminRegister() {
     email: '',
     password: '',
     password2: '',
-    phoneNo:0,
+    phone:'',
   })
-  const { name, email, password, password2,phoneNo } = formData
+  const { name, email, password, password2,phone } = formData
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { isLoading } = useSelector((state) => state.admins)
@@ -34,7 +34,7 @@ function AdminRegister() {
         name,
         email,
         password,
-        phoneNo,
+        phone,
       }
       dispatch(registerAdmin(adminData))
         .unwrap()
@@ -51,7 +51,7 @@ function AdminRegister() {
 
   return (
     <>
-    <AdminHeader/>
+    <Navbar/>
       <section className='heading'>
         <h1>
           <GrUserAdmin /> Register 
@@ -76,11 +76,11 @@ function AdminRegister() {
             <input
               type='tel'
               className='form-control'
-              id='phoneNo'
-              name='phoneNo'
+              id='phone'
+              name='phone'
               pattern="[0-9]{10}"
               maxlength="10"
-              value={phoneNo}
+              value={phone}
               onChange={onChange}
               placeholder='Enter your Phone Number'
               required

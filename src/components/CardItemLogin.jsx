@@ -1,5 +1,6 @@
 import React from 'react';
 import { LoginSignup } from '../pages/LoginSignup'
+import {Navbar} from './Navbar'
 
 function CardItemLogin() {
 
@@ -46,11 +47,14 @@ function CardItemLogin() {
   ]
 
   return (
+    <>
+    <Navbar/>
     <div className="card-wrapper">
       {cardsData.map((card, index) => (
         <LoginSignup key={index} {...card} />
       ))}
     </div>
+    </>
   );
 };
 

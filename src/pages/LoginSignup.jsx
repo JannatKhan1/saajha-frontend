@@ -1,6 +1,6 @@
 import React from 'react'
 import '../index.css';
-import { Navbar } from '../components/Navbar';
+
 export const LoginSignup = ({
   imgSrc,
   imgAlt,
@@ -26,7 +26,6 @@ export const LoginSignup = ({
   
   return (
     <>
-    <Navbar/>
     <div className="card-container">
       {imgSrc && imgAlt && <img src={imgSrc} alt={imgAlt} className="card-image-anika" />}
       {title && <h1 className="card-title-anika">{title}</h1>}
