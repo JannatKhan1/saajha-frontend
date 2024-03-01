@@ -5,15 +5,31 @@ export const useAuthStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)
 
-    const {user} = useSelector((state)=> state.auth)
+    const {volunteer} = useSelector((state)=> state.volunteers)
     useEffect(()=>{
-        if(user){
+        if(volunteer){
             setLoggedIn(true)
         }else {
             setLoggedIn(false)
         }
         setCheckingStatus(false)
-    },[user]) 
+    },[volunteer]) 
+    return{loggedIn, checkingStatus}
+}
+
+export const useAdminStatus = () => {
+    const [loggedIn, setLoggedIn] = useState(false)
+    const [checkingStatus, setCheckingStatus] = useState(true)
+
+    const {admin} = useSelector((state)=> state.admins)
+    useEffect(()=>{
+        if(admin){
+            setLoggedIn(true)
+        }else {
+            setLoggedIn(false)
+        }
+        setCheckingStatus(false)
+    },[admin]) 
     return{loggedIn, checkingStatus}
 }
 

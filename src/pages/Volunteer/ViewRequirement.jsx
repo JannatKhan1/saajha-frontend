@@ -3,6 +3,7 @@ import { toast } from 'react-toastify'
 import { useSelector, useDispatch } from 'react-redux'
 import { getRequirement } from '../../features/requirements/requirementSlice'
 import { useParams} from 'react-router-dom'
+import Header from '../../components/Volunteer/Header'
 
 
 
@@ -31,6 +32,7 @@ function ViewRequirement() {
 
   return (
     <div>
+      <Header />
       <header>
         <div>
           <h3>Our Current Requirements</h3>

@@ -5,6 +5,7 @@ import { getNGOs } from '../features/ngos/ngoSlice'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Spinner from '../components/Spinner'
+import { Navbar } from '../components/Navbar';
 
 function NGOs() {
   const { ngos } = useSelector((state) => state.ngos)
@@ -18,11 +19,14 @@ function NGOs() {
     return <Spinner />
   }
   return (
+    <>
+    <Navbar />
     <div className="card-wrapper">
       {ngos.map((ngo) => (
         <NGOCard key={ngo._id} ngo = {ngo} />
       ))}
     </div>
+    </>
   );
 };
 

@@ -9,7 +9,9 @@ function CardItemLogin() {
       imgAlt: 'User',
       title: 'User',
       description: 'Description of User',
-      loginbutton: 'Login'
+      loginbutton: 'Login',
+      loginButtonLink: '/UserLogin',
+      
     },
     {
       imgSrc: "https://picsum.photos/300/200",
@@ -17,7 +19,9 @@ function CardItemLogin() {
       title: 'Volunteer',
       description: 'Description of Volunteer',
       loginbutton: 'Login',
-      signupbutton: 'Sign Up'
+      signupbutton: 'Sign Up',
+      loginButtonLink: '/VolunteerLogin',
+      signupButtonLink: '/VolunteerRegister',
     },
     {
       imgSrc: "https://picsum.photos/300/200",
@@ -25,7 +29,9 @@ function CardItemLogin() {
       title: 'Admin',
       description: 'Description of Admin',
       loginbutton: 'Login',
-      signupbutton: 'Sign Up'
+      signupbutton: 'Sign Up',
+      loginButtonLink: '/AdminLogin',
+      signupButtonLink: '/AdminRegister',
     },
 
     {
@@ -34,6 +40,7 @@ function CardItemLogin() {
         title: 'Counsellor',
         description: 'Description of Counsellor',
         loginbutton: 'Login',
+        loginButtonLink: '/CounsellorLogin',
       }
 
   ]
