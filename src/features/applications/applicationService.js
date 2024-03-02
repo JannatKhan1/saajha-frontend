@@ -15,8 +15,18 @@ const createApplication = async (applicationData, ngoId, token) => {
   return response.data
 }
 
+// Get application by ID
+const getApplication = async ( ngoId, applicationId ) => {
+  
+
+  const response = await axios.get(API_URL + ngoId + applicationId)
+
+  return response.data
+}
+
 const applicationService = {
     createApplication,
+    getApplication,
   }
   
   export default applicationService

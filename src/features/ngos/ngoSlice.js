@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import ngoService from './ngoService'
-import { extractErrorMessage } from '../../utils'
 
 const initialState = {
   ngos: [],

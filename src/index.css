@@ -277,3 +277,74 @@ nav .menu span {
   padding: 0 20px;
 
 }
+
+/* Version 2 */
+
+.text-popup-container {
+  color:#000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  z-index: 9999;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 500px; /* Adjust the maximum width as needed */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-popup {
+  padding: 20px;
+}
+
+.text-popup button.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+.text-popup textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.text-popup button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.apply-button {
+  text-align: center;
+  width: 90%;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+.apply-button.applied {
+  background-color: green; 
+  text-align: center;
+  width: 90%;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+}

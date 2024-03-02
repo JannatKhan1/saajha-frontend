@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import requirementService from './requirementService'
-import { extractErrorMessage } from '../../utils'
 
 const initialState = {
     requirements: [],
