@@ -21,29 +21,31 @@ function ViewRequirement() {
   const { requirement } = useSelector((state) => state.requirements);
 
   // Check if requirement is an array and has at least one element
+  //Version 2
   if (!requirement || !requirement.length) {
     return (
       <>
-      <Header />
-        <div>
-          <p>No current requirement set by Admin</p>
+        <Header />
+        <div className="requirement-container">
+          <p className="requirements-box">No current requirement set by Admin</p>
         </div>
       </>
-      );
+    );
   }
-
 
   return (
     <div>
       <Header />
       <header>
-        <div>
-          <h3>Our Current Requirements</h3>
-          <p>{requirement[0].requirements}</p>
+        <div className="requirements-container">
+          <h3 className="requirements-title">Our Current Requirements</h3>
+          <div className="requirements-box">
+            {requirement[0].requirements}
+          </div>
         </div>
       </header>
     </div>
   );
 }
 
-export default ViewRequirement;
+export default ViewRequirement

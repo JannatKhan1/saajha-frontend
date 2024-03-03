@@ -15,11 +15,16 @@ const createApplication = async (applicationData, ngoId, token) => {
   return response.data
 }
 
-// Get application by ID
-const getApplication = async ( ngoId, applicationId ) => {
-  
+//Version 2
+// Get volunteer application
+const getApplication = async (ngoId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
 
-  const response = await axios.get(API_URL + ngoId + applicationId)
+  const response = await axios.get(API_URL + ngoId, config)
 
   return response.data
 }

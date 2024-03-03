@@ -7,6 +7,7 @@ import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
 
 
+
 function VolunteerRegister() {
   const [formData, setFormData] = useState({  
     name: '',

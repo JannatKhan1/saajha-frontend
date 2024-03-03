@@ -32,12 +32,13 @@ export const createApplication = createAsyncThunk(
   }
 )
 
-// Get Application
+// Get volunteer application
 export const getApplication = createAsyncThunk(
   'applications/get',
-  async (ngoId, applicationId, thunkAPI) => {
+  async (ngoId, thunkAPI) => {
     try {
-      return await applicationService.getTicket(ngoId,applicationId)
+      const token = thunkAPI.getState().volunteers.volunteer.token
+      return await applicationService.getApplication(ngoId, token)
     } catch (error) {
       const message =
         (error.response &&

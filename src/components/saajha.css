@@ -1,0 +1,276 @@
+.cont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://give.do/blog/wp-content/uploads/2021/12/Disability-NGO.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animate 16s ease-in-out infinite;
+  }
+  @keyframes animate {
+    0%,100%{
+      background-image: url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MTExNjUzNHx8ZW58MHx8fHx8);
+    }
+  25%{
+    background-image: url(https://cbmindia.org/wp-content/uploads/2021/01/Mobile_banner.jpg);
+  }
+  50%{
+    background-image: url(https://smileindiatrust.org/wp-content/uploads/2019/07/involved5.jpg);
+  }
+  75%{
+    background-image: url(https://www.helplocal.in/assets/image/causes/differently-abled.jpg);
+  }  
+  }
+  
+  
+  .cont::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.172), rgb(0, 0, 0));
+    z-index: 1;
+  }
+  
+  
+  .text-container {
+    flex: 1; /* Take up remaining space */
+    order: 2; /* Change the order to appear on the right */
+    padding: 20px; /* Add padding for better visibility */
+    z-index: 2; /* Ensure text is above the pseudo-element */
+  }
+  
+  .hometext h1 {
+    text-align: center; 
+    color: white; 
+    font-size: 100px;
+    font-family: 'Samarkan';
+    animation: slidebottom 1s ease forwards; 
+    animation-delay:0.20s ;
+  }
+  @keyframes slidebottom {
+    0%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  
+  .hometext h2{
+    text-align: center; /* Align text to the left */
+    color: white; /* Set text color to white or desired color */
+    font-size: 30px;
+    line: height 1px;
+    animation: slidebottom 1s ease forwards; 
+    animation-delay:0.0s ;
+  }
+  
+  @keyframes slidebottom {
+    0%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .about-us {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .about-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    padding-top: 90px;
+  }
+  
+  .about-text h3 {
+    color: white;
+    font-size: 50px;
+    line-height: 3;
+  }
+  .about-text h4 {
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 1px;
+    margin-bottom: 6px;
+  }
+  .about-text h5 {
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+  }
+  
+  .about-text .aboutus1 p {
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  
+  }
+  .about-text .aboutus2 p {
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  
+  }
+  .about-text .aboutus3 p {
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  
+  }
+  .about-text .aboutus4 p {
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  
+  }
+  .logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#F0F7EE;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  /* Existing styles remain the same */
+  
+  .partition {
+    width: 100%;
+    height: 20px; /* Adjust the height of the partition */
+    background-color: hsl(262, 76%, 10%); /* Change the color of the partition */
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #14062D;
+  }
+  
+  .card {
+    width: 20%;
+    padding: 30px;
+    background-color: #f0f0f0; /* Change the background color of the cards */
+    border-radius: 8px;
+    text-align: center;
+    color: #333; /* Set the text color */
+    margin-bottom: 30px;
+    justify-items:center;
+  }
+  
+  .card h3 {
+    color: #555; /* Set the heading color */
+  }
+  
+  .card p {
+    margin-top: 10px;
+  }
+  
+  .card-logo {
+    max-width: 50%; /* Adjust the size of the logos as needed */
+    margin: 10px auto; /* Center the logos within the cards */
+  }
+  .social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .social-icon {
+    width: 30px; /* Adjust the size of the icons */
+    height: 30px;
+    margin: 0 60px; /* Adjust the spacing between icons */
+    margin-top: 20px;
+    animation: slidebottom 1s ease forwards; 
+    animation-delay:0.0s ;
+  }
+  
+  @keyframes slidebottom {
+    0%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  .partition1 {
+    width: 100%;
+    height: 20px;
+    background-color: #9B8EA8; /* Background color of the partition */
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #9B8EA8; /* Background color of the contact form section */
+    color: white;
+  }
+  
+  .contact-section h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 50%;
+    max-width: 600px;
+    display: grid;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #F0F7EE;
+    color: #14062D;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #14062D;
+    color: #F0F7EE;
+  }

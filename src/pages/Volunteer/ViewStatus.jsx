@@ -2,49 +2,47 @@
 import { useEffect } from 'react'
 import { toast } from 'react-toastify'
 import { useSelector, useDispatch } from 'react-redux'
-import { getRequirement } from '../../features/requirements/requirementSlice'
-import { useParams} from 'react-router-dom'
-import Header from '../../components/Volunteer/Header'
+import { getApplication } from '../../features/applications/applicationSlice'
+import { useParams } from 'react-router-dom'
 
-
-
-function ViewRequirement() {
-  const dispatch = useDispatch();
-  const { adminId } = useParams();
+function ViewStatus() {
+  const { application } = useSelector((state) => state.applications)
+  const dispatch = useDispatch()
+  const { ngoId } = useParams()
 
   useEffect(() => {
-    dispatch(getRequirement(adminId))
-      .catch((error) => {
-        toast.error("Error fetching requirement");
-      });
-  }, [adminId, dispatch]);
+    dispatch(getApplication(ngoId)).unwrap().catch(error => {
+      if (error.message === "Not Authorized") {
+        toast.error("You are not authorized to view this application.");
+      } else if (error.message === "Application not found") {
+        // You can choose not to show any notification here
+      } else {
+      }
+    });
+    return () => {
+      // Reset application state when the component is unmounted
+      dispatch(getApplication(null)); // Assuming null indicates no application
+    }
+  }, [ngoId, dispatch])
 
-  const { requirement } = useSelector((state) => state.requirements);
-
-  // Check if requirement is an array and has at least one element
-  if (!requirement || !requirement.length) {
+  if (!application || !application[0]) {
     return (
       <>
-      <Header />
-        <div>
-          <p>No current requirement set by Admin</p>
-        </div>
+        <p>Fill out the application as soon as possible</p>
       </>
-      );
+    )
   }
 
+  const firstapp = application[0];
 
   return (
     <div>
-      <Header />
-      <header>
-        <div>
-          <h3>Our Current Requirements</h3>
-          <p>{requirement[0].requirements}</p>
-        </div>
-      </header>
+        <h2>Here are the details we received: </h2>
+      <div>{firstapp.description}</div>
+      <p>Your application status is: </p>
+      <div className={`status status-${firstapp.status}`}>{firstapp.status}</div>
     </div>
-  );
+  )
 }
 
-export default ViewRequirement;
+export default ViewStatus

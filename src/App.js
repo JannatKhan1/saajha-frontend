@@ -14,6 +14,8 @@ import VolunteerLogin from './pages/Volunteer/VolunteerLogin';
 import { VolunteerRoute } from './components/PrivateRoute';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminRegister from './pages/Admin/AdminRegister';
+import ViewStatus from './pages/Volunteer/ViewStatus';
+import FAQs from './pages/FAQs';
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/NGOs' element={<NGOs/>} />
             <Route path='/LoginSignup' element={<CardItemLogin/>} />
+            <Route path='/FAQs' element={<FAQs/>} />
           
           
           {/* Volunteer Routes */}
@@ -38,7 +41,10 @@ function App() {
             <Route path='/requirement/:adminId' element={<VolunteerRoute />}>
                <Route path='/requirement/:adminId' element = {<ViewRequirement/>} /> 
             </Route>
-
+            <Route path='/application/:ngoId' element={<VolunteerRoute />}>
+               <Route path='/application/:ngoId' element = {<ViewStatus/>} /> 
+            </Route>
+            
 
             {/* Admin Routes */}
             <Route path='/AdminRegister' element={<AdminRegister/>} />

@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Navbar*/
+@media (max-wigth: 250px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a{
+    margin: 0.2rem 0.5rem;
+  }
+}
+
+@font-face {
+  font-family: 'Samarkan'; 
+  src: url('./font.TTF') format('truetype'); 
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #14062D;
+  position: sticky;
+  top: 0;
+
+}
+
+.nav-title{
+  font-family: 'Samarkan';
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 80px;
+  text-decoration: none;
+  color: white;
+  padding: 0 100px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display:inline-block;
+  line-height: 80 px;
+  margin: 0 5px;
+
+}
+
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav ul li a:not(.active):hover{
+  background-color: #002500;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+/*Navbar*/
+
+/*VolunteerLanding*/
+.card-title-anika,
+.card-description-anika 
+{
+  font-weight: bold;  
+  text-align: center; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+}
+.card-container {
+  width: 320px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  position: relative;
+  padding: 100p;
+  margin-top: 40px;
+  background-color: #9B8EA8;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+}
+.card-image-anika{
+  width: 100%;
+  height: 600px;  
+  border-radius: 15px ;
+}
+.card-body{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position:absolute;
+  background: #1f3d4738; 
+  backdrop-filter: blur(5px); 
+  border-radius: 15px;
+  padding:30px ;
+  color: #1d0f0f;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction:column ;
+  justify-content:center ;
+  transition: 1s;
+}
+.card-container:hover .card-body{
+  right: 0
+}
+.card-title{   
+  font-size: 30px;
+  color: #1f0e0a;
+  font-weight: 5;
+  padding-left: 10px;
+  padding-top: 50px;  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card-image-anika {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/*VolunteerLanding*/
+
+/*LoginSignup*/
+.button-container{
+  display: flexbox;
+}
+.button-container {
+  display: flex;
+}
+.button-container > a {
+  margin-right: 10px; /* Adjust as needed for spacing between buttons */
+}
+.btn-reverse {
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* White text */
+}
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background: #788E77;
+  color: #000;
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-transform: none;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.button-login,
+.button-signup
+{
+  appearance: button;
+  background-color: #788E77;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 200px;
+  border-radius: 30px; 
+  border: 4px solid #000; 
+  margin-top: 10px;
+  
+}
+.button-signup {
+  border: 4px solid #000;  
+}
+.card-icon{
+  height: 250px;
+  font-size: 100px; 
+  padding: 80px;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*LoginSignup*/
+
+
+.card-description{
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+/*.card-button,
+.view-button,
+.status-button,
+.apply-button {
+  color: #1f3d47;
+  background: #8fabba;
+  padding: 10px 20px;
+  width: 100px;
+  display: flexbox;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;  
+  cursor: pointer;
+}
+
+.apply-button.applied {
+  background-color: green; 
+  text-align: center;
+  width: 90%;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+}*/
+

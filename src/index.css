@@ -207,13 +207,15 @@ nav .menu span {
   padding: 5px 15px;
   font-size: 13px;
 }
+
+/* Version 2 */
 .btn {
   margin-top: 15px;
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 25px;
   background: #000;
-  color: #fff;
+  color: 895737;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -224,6 +226,7 @@ nav .menu span {
   justify-content: center;
 }
 
+
 .form {
   width: 70%;
   margin: 0 auto;
@@ -232,7 +235,7 @@ nav .menu span {
 .form {
   max-width: 1000px;
   margin: 25px auto;
-  background-color: rgb(132, 198, 231);
+  background-color: #e0a891;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -263,8 +266,8 @@ nav .menu span {
 .form-group .btn-block  {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #4d2808;
+  color: rgb(240, 212, 212);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -272,13 +275,21 @@ nav .menu span {
 }
 
 .heading {
-  font-size: 2rem;
-  font-weight: 700;
-  padding: 0 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: cursive;
+  font-weight: 800;
+  padding: 50 100px;
+  span {
+    font-size: 1.6em;
+  }
+    .cursive {
+  font-family: cursive;
+    }
 
 }
 
-/* Version 2 */
+
 
 .text-popup-container {
   color:#000;
@@ -347,4 +358,264 @@ nav .menu span {
   color: white;
   text-decoration: none;
   margin: 0.5rem;
+}
+
+.application {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #f4f4f4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.status {
+  background-color: #333;
+  color: #fff;
+  width: 100px;
+  padding: 0 20px;
+  justify-self: center;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.status-applied {
+  background-color: green;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.status-approved {
+  background-color: steelblue;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.status-rejected {
+  background-color: darkred;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/*VolunteerLanding*/
+.card-title-anika,
+.card-description-anika 
+{
+  font-weight: bold;  
+  text-align: center; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+}
+.card-container {
+  width: 320px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  position: relative;
+  padding: 100p;
+  margin-top: 40px;
+  background-color: #9B8EA8;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+}
+.card-image-anika{
+  width: 100%;
+  height: 600px;  
+  border-radius: 15px ;
+}
+.card-body{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position:absolute;
+  background: #1f3d4738; 
+  backdrop-filter: blur(5px); 
+  border-radius: 15px;
+  padding:30px ;
+  color: #1d0f0f;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction:column ;
+  justify-content:center ;
+  transition: 1s;
+}
+.card-container:hover .card-body{
+  right: 0
+}
+.card-title{   
+  font-size: 30px;
+  color: #1f0e0a;
+  font-weight: 5;
+  padding-left: 10px;
+  padding-top: 50px;  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card-image-anika {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/*VolunteerLanding*/
+
+/*LoginSignup*/
+.button-container{
+  display: flexbox;
+}
+.button-container {
+  display: flex;
+}
+.button-container > a {
+  margin-right: 10px; /* Adjust as needed for spacing between buttons */
+}
+.btn-reverse {
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* White text */
+}
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background: #788E77;
+  color: #000;
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-transform: none;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.button-login,
+.button-signup
+{
+  appearance: button;
+  background-color: #788E77;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 200px;
+  border-radius: 30px; 
+  border: 4px solid #000; 
+  margin-top: 10px;
+  
+}
+.button-signup {
+  border: 4px solid #000;  
+}
+.card-icon{
+  height: 250px;
+  font-size: 100px; 
+  padding: 80px;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*LoginSignup*/
+
+
+.card-description{
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+/* View Requirements CSS */
+
+.requirements-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.requirements-box {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* FAQ CSS */
+.faq-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  margin-top:30px;
+  padding-bottom: -20px;
+  color:#14062D;
+}
+
+.faq-wrapper {
+display: flex;
+height:100vh;
+width:100vw;
+justify-content: center;
+align-items: center;
+padding-bottom: 20px;
+
+}
+
+.accordian {
+width: 500px;
+
+}
+
+.item {
+background:#9B8EA8;
+margin-bottom: 5px;
+padding: 10px 20px;
+}
+
+
+.title {
+color:#F0F7EE;
+display: flex;
+justify-content: space-between;
+align-items: center;
+cursor:pointer;
+}
+
+.content {
+color:#F0F7EE;
+max-height: 0;
+overflow: hidden;
+transition: all 0.5s cubic-bezier(0,1,0,1);
+text-align: justify;
+}
+
+.content.show {
+height:auto;
+max-height: 9999px;
+transition: all 0.5s cubic-bezier(1,0,1,0);
+text-align: justify;
 }
