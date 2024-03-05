@@ -245,35 +245,12 @@ nav .menu span {
   margin-bottom: 10px;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #e6e6e6;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  font-family: inherit;
-}
-
 .form-group label {
   text-align: left;
   display: block;
   font-weight: bold;
   margin: 0 0 5px 3px;
 }
-
-.form-group .btn-block  {
-  width: 100%;
-  padding: 10px;
-  background-color: #4d2808;
-  color: rgb(240, 212, 212);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 .heading {
   margin-top: 20px;
   text-align: center;
@@ -618,4 +595,29 @@ height:auto;
 max-height: 9999px;
 transition: all 0.5s cubic-bezier(1,0,1,0);
 text-align: justify;
+}
+
+
+/* Version-3 */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 200%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group .btn-block  {
+  width: 200%;
+  padding: 10px;
+  background-color: #4d2808;
+  color: rgb(240, 212, 212);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
