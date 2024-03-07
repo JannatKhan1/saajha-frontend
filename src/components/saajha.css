@@ -67,7 +67,7 @@
     text-align: center; /* Align text to the left */
     color: white; /* Set text color to white or desired color */
     font-size: 30px;
-    line: height 1px;
+    line-height: 1px;
     animation: slidebottom 1s ease forwards; 
     animation-delay:0.0s ;
   }
