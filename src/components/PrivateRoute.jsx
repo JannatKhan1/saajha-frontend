@@ -2,6 +2,7 @@ import {Navigate, Outlet} from "react-router-dom"
 import {useAuthStatus, useAdminStatus} from '../hooks/useAuthStatus'
 import Spinner from './Spinner'
 
+
 export const VolunteerRoute = () => {
     const {loggedIn,checkingStatus} = useAuthStatus()
 

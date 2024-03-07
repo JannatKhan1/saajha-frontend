@@ -1,2 +1,4 @@
 1. index.css
 line 601 onwards
+
+2. imported index.css in every file and removed from App.js

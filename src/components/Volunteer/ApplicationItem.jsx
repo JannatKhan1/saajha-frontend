@@ -1,4 +1,8 @@
+//Version 3
+import '../../index.css'
+
 //Version 2
+
 
 
 function ApplicationItem({ application }) {

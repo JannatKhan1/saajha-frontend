@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { loginAdmin } from '../../features/admins/adminSlice'
 import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
+//Version 3
+import '../../index.css'
 
 function AdminLogin() {
   const [formData, setFormData] = useState({

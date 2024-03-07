@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { registerVolunteer } from '../../features/volunteers/volunteerSlice'
 import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
-
+//Version 3
+import '../../index.css'
 
 
 function VolunteerRegister() {

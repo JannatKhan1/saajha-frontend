@@ -1,4 +1,6 @@
 import React from 'react';
+//Version 3
+import '../index.css'
 
 function NGOCard ({ ngo }) {
   return (

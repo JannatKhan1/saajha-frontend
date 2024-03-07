@@ -5,6 +5,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getApplication } from '../../features/applications/applicationSlice'
 import { useParams } from 'react-router-dom'
 
+//Version 3
+import '../../index.css'
+
 function ViewStatus() {
   const { application } = useSelector((state) => state.applications)
   const dispatch = useDispatch()

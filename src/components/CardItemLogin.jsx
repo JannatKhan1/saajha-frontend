@@ -5,6 +5,8 @@ import { MdVolunteerActivism } from "react-icons/md";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { FaUserDoctor } from "react-icons/fa6";
 import {Navbar} from './Navbar'
+//Version 3
+import '../index.css'
 
 function CardItemLogin() {
 
