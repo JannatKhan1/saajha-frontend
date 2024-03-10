@@ -17,6 +17,7 @@ export const useAuthStatus = () => {
     return{loggedIn, checkingStatus}
 }
 
+//Version 3
 export const useAdminStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)

@@ -1,5 +1,7 @@
+line no,name of file,path of file and changes made(code)
 1. index.css
 line 601 onwards
 
 2. imported index.css in every file and removed from App.js
 3. Deleted NGO Card from /components/Volunteer/Landing
+
