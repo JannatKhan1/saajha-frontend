@@ -15,6 +15,9 @@ import AdminLogin from './pages/Admin/AdminLogin';
 import AdminRegister from './pages/Admin/AdminRegister';
 import ViewStatus from './pages/Volunteer/ViewStatus';
 import FAQs from './pages/FAQs';
+import AdminLanding from './pages/Admin/AdminLanding';
+import { AdminRoute } from './components/PrivateRoute';
+import ViewNGO from './pages/NGO/ViewNGO';
 
 function App() {
   return (
@@ -48,6 +51,12 @@ function App() {
             {/* Admin Routes */}
             <Route path='/AdminRegister' element={<AdminRegister/>} />
             <Route path='/AdminLogin' element={<AdminLogin/>} /> 
+            {/* Version 3 temporary */}
+            
+            <Route path='/AdminLanding' element={<AdminLanding/>} />
+            <Route path='/ViewNGO/:ngoId' element={<AdminRoute />}>
+              <Route path='/ViewNGO/:ngoId' element={<ViewNGO />} /> 
+            </Route>
 
 
           </Routes>

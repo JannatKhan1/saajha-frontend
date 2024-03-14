@@ -10,8 +10,24 @@ const getNGOs = async () => {
   return response.data
 }
 
+//Version 3
+// Get NGO by ID
+const getNGO = async (ngoId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+
+  const response = await axios.get(API_URL + ngoId, config)
+
+  return response.data
+}
+
 const ngoService = {
   getNGOs,
+  //Version 3
+  getNGO,
 }
 
 export default ngoService

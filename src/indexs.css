@@ -1,0 +1,78 @@
+/* Version 3 */
+body {
+    margin: 0; /* Remove default margin for the body element */
+    padding: 0; /* Remove default padding for the body element */
+    background-color: #F0F7EE;
+}
+.admin-landing-container {
+    color: black;
+    text-align: center;
+}
+
+.welcome-text {
+    padding-top: 30px;
+}
+.popup-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Adjust the color as needed */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.action-button {
+    background-color: #9B8EA8;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    text-align: center; /* Center text horizontally */
+    line-height: 1.5; /* Center text vertically */
+    font-size: 16px; /* Adjust font size as needed */
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  .modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff; /* Adjust the color as needed */
+    background-color: #9B8EA8;
+    width: 30px; /* Adjust the width to make it square */
+    height: 30px; /* Adjust the height to make it square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    opacity: 1;
+  }
+  .close:hover {
+    color: #000; /* Change color on hover if desired */
+  }

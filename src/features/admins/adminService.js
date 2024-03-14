@@ -12,7 +12,6 @@ const registerAdmin = async (adminData) => {
   return response.data
 }
 
-
 // Login admin
 const loginAdmin = async (adminData) => {
   const response = await axios.post(API_URL + 'login', adminData)
