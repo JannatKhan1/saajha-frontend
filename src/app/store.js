@@ -5,6 +5,8 @@ import volunteerReducer from '../features/volunteers/volunteerSlice'
 import adminReducer from '../features/admins/adminSlice'
 //Version 2
 import applicationReducer from '../features/applications/applicationSlice'
+//Version 3
+import requestReducer from '../features/requests/requestSlice'
 
 export const store = configureStore({
   reducer: {
@@ -14,5 +16,7 @@ export const store = configureStore({
     admins: adminReducer,
     //Version 2
     applications: applicationReducer,
+    //Version 3
+    requests: requestReducer,
   },
 });

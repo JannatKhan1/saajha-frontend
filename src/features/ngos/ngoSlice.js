@@ -36,7 +36,6 @@ export const getNGO = createAsyncThunk(
   async (ngoId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().admins.admin.token
-      console.log('Token: ', token)
       return await ngoService.getNGO(ngoId, token)
     } catch (error) {
       const message =

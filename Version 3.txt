@@ -5,3 +5,9 @@ line 601 onwards
 2. imported index.css in every file and removed from App.js
 3. Deleted NGO Card from /components/Volunteer/Landing
 
+4. store.js (src/app)
+Line no       Changes Made
+8,9           imports of request reducer
+19,20         adding requests redux store
+
+5. ViewRequests.jsx

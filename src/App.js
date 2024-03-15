@@ -18,6 +18,8 @@ import FAQs from './pages/FAQs';
 import AdminLanding from './pages/Admin/AdminLanding';
 import { AdminRoute } from './components/PrivateRoute';
 import ViewNGO from './pages/NGO/ViewNGO';
+import ViewRequests from './pages/Admin/ViewRequests';
+import UpdateStatus from './pages/Admin/UpdateStatus';
 
 function App() {
   return (
@@ -51,14 +53,21 @@ function App() {
             {/* Admin Routes */}
             <Route path='/AdminRegister' element={<AdminRegister/>} />
             <Route path='/AdminLogin' element={<AdminLogin/>} /> 
-            {/* Version 3 temporary */}
+            {/* Version 3 */}
             
             <Route path='/AdminLanding' element={<AdminLanding/>} />
+            {/* NGO Routes */}
             <Route path='/ViewNGO/:ngoId' element={<AdminRoute />}>
               <Route path='/ViewNGO/:ngoId' element={<ViewNGO />} /> 
             </Route>
 
-
+            {/* Volunteer Request Routes */}
+            <Route path='/ViewRequests/:ngoId' element={<AdminRoute />}>
+              <Route path='/ViewRequests/:ngoId' element={<ViewRequests />} /> 
+            </Route>
+            <Route path='/:requestId' element={<AdminRoute />}>
+              <Route path='/:requestId' element={<UpdateStatus />} /> 
+            </Route>
           </Routes>
       </div>
       </Router>
