@@ -38,8 +38,7 @@ export const getRequest = createAsyncThunk(
     'requests/get',
     async (requestId, thunkAPI) => {
       try {
-        const token = thunkAPI.getState().admins.admin.token
-        return await requestService.getRequest(requestId, token)
+        return await requestService.getRequest(requestId)
       } catch (error) {
         const message =
           (error.response &&
@@ -58,8 +57,7 @@ export const acceptStatus = createAsyncThunk(
   'requests/accept',
   async (requestId, thunkAPI) => {
     try {
-      const token = thunkAPI.getState().admins.admin.token
-      return await requestService.acceptStatus(requestId,token);
+      return await requestService.acceptStatus(requestId);
     } catch (error) {
       return thunkAPI.rejectWithValue(extractErrorMessage(error));
     }
@@ -71,8 +69,7 @@ export const rejectStatus = createAsyncThunk(
   'requests/rejectStatus',
   async (requestId, thunkAPI) => {
     try {
-      const token = thunkAPI.getState().admins.admin.token
-      return await requestService.rejectStatus(requestId,token);
+      return await requestService.rejectStatus(requestId);
     } catch (error) {
       return thunkAPI.rejectWithValue(extractErrorMessage(error));
     }

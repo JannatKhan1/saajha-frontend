@@ -16,14 +16,9 @@ const getRequests = async (ngoId, token) => {
 }
 
 //Get volunteer request by Id by Admin
-const getRequest = async (requestId, token) => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
+const getRequest = async (requestId) => {
   
-    const response = await axios.get(API_URL + requestId, config)
+    const response = await axios.get(API_URL + requestId)
   
     return response.data
   }
@@ -31,26 +26,17 @@ const getRequest = async (requestId, token) => {
 
 
 // Accept status
-const acceptStatus = async (requestId, token) => {
-    const config = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-    }
-  
-  const response = await axios.put(API_URL + requestId,config)
+const acceptStatus = async (requestId) => {
+    
+  const response = await axios.put(API_URL + requestId)
 
   return response.data
 }
 
 // Reject status
-const rejectStatus = async (requestId,token) => {
-    const config = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-    }
-  const response = await axios.put(API_URL + 'reject/'+ requestId,config)
+const rejectStatus = async (requestId) => {
+    
+  const response = await axios.put(API_URL + 'reject/'+ requestId)
 
   return response.data
 }
