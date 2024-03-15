@@ -25,7 +25,9 @@ function UpdateStatus() {
       .unwrap()
       .then((response) => {
         toast.success('Request Apporved')
+        window.location.reload()
       })
+      
       .catch(toast.error)
   }
 
@@ -36,6 +38,7 @@ function UpdateStatus() {
       .then((response) => {
         toast.success('Request Rejected')
         console.log(response)
+        window.location.reload()
       })
       .catch(toast.error)
   }
