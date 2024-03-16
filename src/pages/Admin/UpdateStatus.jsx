@@ -4,28 +4,32 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getRequest, acceptStatus, rejectStatus } from '../../features/requests/requestSlice' 
 import AdminHeader from '../../components/Admin/AdminHeader';
+import { useNavigate } from 'react-router-dom';
 
 function UpdateStatus() {
   const { requests } = useSelector((state) => state.requests);
   
   const { requestId } = useParams();
 
+
   const selectedRequest = requests.find((request) => request._id === requestId);
 
+  
   const dispatch = useDispatch();
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     dispatch(getRequest(requestId));
   }, [dispatch, requestId]);
   
-
+  
   // Accept Request
   const accept = () => {
     dispatch(acceptStatus(requestId))
       .unwrap()
       .then((response) => {
         toast.success('Request Apporved')
-        window.location.reload()
+        navigate(-1);
       })
       
       .catch(toast.error)
@@ -37,8 +41,8 @@ function UpdateStatus() {
       .unwrap()
       .then((response) => {
         toast.success('Request Rejected')
+        navigate(-1);
         console.log(response)
-        window.location.reload()
       })
       .catch(toast.error)
   }

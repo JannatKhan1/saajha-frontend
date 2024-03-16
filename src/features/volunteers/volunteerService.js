@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://saajha-backend-1.onrender.com/api/volunteer/'
+const API_URL = 'https://saajha-backend-2.onrender.com/api/volunteer/'
 
 // Register volunteer
 const registerVolunteer = async (volunteerData) => {

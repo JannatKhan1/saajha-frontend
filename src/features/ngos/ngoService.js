@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://saajha-backend-1.onrender.com/api/ngos/'
+const API_URL = 'https://saajha-backend-2.onrender.com/api/ngos/'
 
 // Get NGOs by regular user and volunteers
 const getNGOs = async () => {

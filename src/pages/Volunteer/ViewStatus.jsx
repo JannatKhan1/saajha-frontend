@@ -1,51 +1,47 @@
 //Version 2
-import { useEffect } from 'react'
-import { toast } from 'react-toastify'
-import { useSelector, useDispatch } from 'react-redux'
-import { getApplication } from '../../features/applications/applicationSlice'
-import { useParams } from 'react-router-dom'
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getApplications } from '../../features/applications/applicationSlice';
+import { useParams } from 'react-router-dom';
 
 //Version 3
-import '../../index.css'
+import '../../index.css';
 
 function ViewStatus() {
-  const { application } = useSelector((state) => state.applications)
-  const dispatch = useDispatch()
-  const { ngoId } = useParams()
+  const { applications } = useSelector((state) => state.applications);
+  const dispatch = useDispatch();
+  const { ngoId } = useParams();
 
   useEffect(() => {
-    dispatch(getApplication(ngoId)).unwrap().catch(error => {
-      if (error.message === "Not Authorized") {
-        toast.error("You are not authorized to view this application.");
-      } else if (error.message === "Application not found") {
-        // You can choose not to show any notification here
-      } else {
-      }
-    });
-    return () => {
-      // Reset application state when the component is unmounted
-      dispatch(getApplication(null)); // Assuming null indicates no application
-    }
-  }, [ngoId, dispatch])
+    dispatch(getApplications(ngoId)) // Pass ngoId to getApplications
+      .unwrap()
+      .catch(error => {
+        console.error(error);
+      });
+  }, [ngoId, dispatch]);
 
-  if (!application || !application[0]) {
+  // Assuming ngoApplications is an array, you need to access its elements properly
+  const ngoApplications = applications.filter(app => app.ngo === ngoId);
+   
+  if (!ngoApplications || !ngoApplications.length) {
     return (
       <>
         <p>Fill out the application as soon as possible</p>
       </>
-    )
+    );
   }
 
-  const firstapp = application[0];
+  // Assuming you want to display details of the first application
+  const firstApplication = ngoApplications[0];
 
   return (
     <div>
-        <h2>Here are the details we received: </h2>
-      <div>{firstapp.description}</div>
+      <h2>Here are the details we received: </h2>
+      <div>{firstApplication.description}</div>
       <p>Your application status is: </p>
-      <div className={`status status-${firstapp.status}`}>{firstapp.status}</div>
+      <div className={`status status-${firstApplication.status}`}>{firstApplication.status}</div>
     </div>
-  )
+  );
 }
 
-export default ViewStatus
+export default ViewStatus;

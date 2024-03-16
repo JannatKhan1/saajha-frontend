@@ -117,7 +117,11 @@ function AdminLanding() {
                                         <Link to={`/ViewRequests/${ngo._id}`} className='btn btn-reverse btn-sm'>
                                             View Requests
                                         </Link>
+                                        <Link to={`/ViewVolunteers/${ngo._id}`} className='btn btn-reverse btn-sm'>
+                                            View Volunteers
+                                        </Link>
                                     </div>
+                                    
                                 ))}
                             </div>
         

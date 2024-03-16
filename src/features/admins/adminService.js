@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://saajha-backend-1.onrender.com/api/admin/'
+const API_URL = 'https://saajha-backend-2.onrender.com/api/admin/'
 
 // Register admin
 const registerAdmin = async (adminData) => {

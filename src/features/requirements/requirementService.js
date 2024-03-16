@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'https://saajha-backend-1.onrender.com/api/requirement/'
+const API_URL = 'https://saajha-backend-2.onrender.com/api/requirement/'
 
 // Get requirement for a particular NGO
 const getRequirement = async (adminId) => {

@@ -20,6 +20,7 @@ import { AdminRoute } from './components/PrivateRoute';
 import ViewNGO from './pages/NGO/ViewNGO';
 import ViewRequests from './pages/Admin/ViewRequests';
 import UpdateStatus from './pages/Admin/UpdateStatus';
+import ViewVolunteers from './pages/Admin/ViewVolunteers';
 
 function App() {
   return (
@@ -67,6 +68,9 @@ function App() {
             </Route>
             <Route path='/:requestId' element={<AdminRoute />}>
               <Route path='/:requestId' element={<UpdateStatus />} /> 
+            </Route>
+            <Route path='/ViewVolunteers/:ngoId' element={<AdminRoute />}>
+              <Route path='/ViewVolunteers/:ngoId' element={<ViewVolunteers />} /> 
             </Route>
           </Routes>
       </div>

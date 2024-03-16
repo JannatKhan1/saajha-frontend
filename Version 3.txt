@@ -11,3 +11,7 @@ Line no       Changes Made
 19,20         adding requests redux store
 
 5. ViewRequests.jsx
+6. View Status.jsx
+7. AdminLanding.jsx
+8. UpdateStatus.jsx
+9. features - saajha backend api link changed
