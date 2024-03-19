@@ -21,6 +21,7 @@ import ViewNGO from './pages/NGO/ViewNGO';
 import ViewRequests from './pages/Admin/ViewRequests';
 import UpdateStatus from './pages/Admin/UpdateStatus';
 import ViewVolunteers from './pages/Admin/ViewVolunteers';
+import AddRequirements from './pages/Admin/AddRequirements';
 
 function App() {
   return (
@@ -31,9 +32,11 @@ function App() {
             
           {/* Regular User Routes */}
             <Route path='/' element={<Home />} />
+            <Route path='/About' element={<Home />} />
             <Route path='/NGOs' element={<NGOs/>} />
             <Route path='/LoginSignup' element={<CardItemLogin/>} />
             <Route path='/FAQs' element={<FAQs/>} />
+            <Route path='/ContactUs' element={<Home />} />
           
           
           {/* Volunteer Routes */}
@@ -42,9 +45,6 @@ function App() {
            
            <Route path='/VolunteerLanding' element={<VolunteerRoute />}>
               <Route path='/VolunteerLanding' element={<Landing/>} /> 
-            </Route>
-            <Route path='/requirement/:adminId' element={<VolunteerRoute />}>
-               <Route path='/requirement/:adminId' element = {<ViewRequirement/>} /> 
             </Route>
             <Route path='/application/:ngoId' element={<VolunteerRoute />}>
                <Route path='/application/:ngoId' element = {<ViewStatus/>} /> 
@@ -72,6 +72,11 @@ function App() {
             <Route path='/ViewVolunteers/:ngoId' element={<AdminRoute />}>
               <Route path='/ViewVolunteers/:ngoId' element={<ViewVolunteers />} /> 
             </Route>
+            <Route path='/AddRequirements' element={<AdminRoute />}>
+              <Route path='/AddRequirements' element={<AddRequirements />} /> 
+            </Route>
+          <Route path='/requirement/:adminId' element = {<ViewRequirement/>} /> 
+         
           </Routes>
       </div>
       </Router>

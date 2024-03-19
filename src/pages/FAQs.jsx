@@ -40,17 +40,15 @@ function FAQs(){
 
 
 const data = [
- 
     {
         question: 'What services does Saajha offer?',
         answer: 
-        'Search and explore a comprehensive directory of NGOs, Easily apply for volunteering opportunities at various NGOs, Book appointments with counsellors and view medical records (securely).'
-
+        'Search and explore a comprehensive directory of NGOs, where hovering over the cards allows you to view information about each NGO. Easily apply for volunteering opportunities at various NGOs, and book appointments with counselors while securely viewing medical records.'
     },
     {
         question: 'How do I apply to volunteer at an NGO?',
         answer: 
-        'Sign-up as a Volunteer on our portal, explore NGOs and causes that interest you and directly apply with a click of a button'
+        'Sign up as a volunteer on our portal, where you can explore various NGOs and causes that interest you. Simply hover over the NGO cards to reveal the apply button, allowing you to directly apply with just a click.'
 
     },
     {
