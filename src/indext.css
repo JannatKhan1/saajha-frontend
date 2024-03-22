@@ -1,0 +1,45 @@
+/* View Status CSS */
+.status-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .status-box {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .status {
+    background-color: #333;
+    color: #fff;
+    width: 100px;
+    padding: 0 20px;
+    justify-self: center;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .status-Applied {
+    background-color: green;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  .status-Approved {
+    background-color: steelblue;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  .status-Rejected {
+    background-color: darkred;
+    color: #fff;
+    border-radius: 10px;
+  }

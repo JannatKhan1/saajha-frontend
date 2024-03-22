@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Header from '../../components/Volunteer/Header';
 
 //Version 3
-import '../../index.css';
+import '../../indext.css';
 
 function ViewStatus() {
   const { applications } = useSelector((state) => state.applications);
@@ -28,8 +28,8 @@ function ViewStatus() {
     return (
       <>
       <Header />
-        <div className="requirement-container">
-          <p className="requirements-box">No current requirement set by Admin</p>
+        <div className="status-container">
+          <p className="status-box">No current requirement set by Admin</p>
         </div>
       </>
     );
@@ -39,14 +39,17 @@ function ViewStatus() {
   const firstApplication = ngoApplications[0];
 
   return (
-    <div className="requirements-container">
-      <h2 className="requirements-title">Here are the details we received: </h2>
-      <div className="requirements-box">
+    <>
+    <Header />
+    <div className="status-container">
+      <h2 className="status-title">Here are the details we received: </h2>
+      <div className="status-box">
       <div>{firstApplication.description}</div>
       <p>Your application status is: </p>
       <div className={`status status-${firstApplication.status}`}>{firstApplication.status}</div>
       </div>
     </div>
+    </>
   );
 }
 

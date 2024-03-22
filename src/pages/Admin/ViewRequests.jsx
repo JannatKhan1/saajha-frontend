@@ -5,6 +5,7 @@ import Spinner from '../../components/Spinner'
 import AdminHeader from '../../components/Admin/AdminHeader'
 import { getRequests } from '../../features/requests/requestSlice'
 import { toast } from 'react-toastify'
+import '../../indext.css'
 
 
 function ViewRequests() {
