@@ -8,6 +8,7 @@ import applicationReducer from '../features/applications/applicationSlice'
 //Version 3
 import requestReducer from '../features/requests/requestSlice'
 import caseReducer from '../features/casee/caseSlice'
+import counsellorReducer from '../features/counsellors/counsellorSlice'
 
 export const store = configureStore({
   reducer: {
@@ -20,5 +21,6 @@ export const store = configureStore({
     //Version 3
     requests: requestReducer,
     casee: caseReducer,
+    counsellors: counsellorReducer,
   },
 });

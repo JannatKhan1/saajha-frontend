@@ -178,7 +178,9 @@ function AdminLanding() {
                     <>
                         <>
                             <div>
-                                <button onClick={() => handleButtonClick("register")}>Register Counsellor</button>
+                            <Link to='/CounsellorRegister' className='btn btn-reverse btn-sm'>
+                                            Register Counsellor
+                            </Link>
                                 <button onClick={() => handleButtonClick("view")}>View Counsellor</button>
                             </div>
         
