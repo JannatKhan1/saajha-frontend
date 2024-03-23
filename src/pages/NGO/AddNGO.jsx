@@ -1,11 +1,9 @@
-//Version 3
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useDispatch} from 'react-redux';
 import { Navbar } from '../../components/Navbar'
-//Version 3.1
 import { addNGO } from '../../features/ngos/ngoSlice';
 
 function AddNGO() {
@@ -30,7 +28,7 @@ function AddNGO() {
     });
   };
 
-  //Version 3.1
+
   const onSubmit = (e) => {
     e.preventDefault()
     const formData = {

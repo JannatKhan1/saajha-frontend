@@ -1,4 +1,3 @@
-//Version 3
 import { useEffect } from 'react'
 import { toast } from 'react-toastify'
 import { useSelector, useDispatch } from 'react-redux'
@@ -39,7 +38,6 @@ function ViewNGO() {
         {ngo.employeeCount && <h3>Employee Count: {ngo.employeeCount}</h3>}
         {ngo.website && <h3>Website: {ngo.website}</h3>}
         {ngo.emailNGO && <h3>E-mail Id: {ngo.emailNGO}</h3>}
-        {/* Version 3.1 */}
         {ngo.image && <div><h3>Image:</h3><img src={ngo.image} alt="NGO Image" /></div>}
         <hr />
         

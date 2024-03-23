@@ -1,4 +1,3 @@
-//Version 3
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -6,7 +5,6 @@ import { FaSignInAlt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
-// Version 3.1
 import { useParams} from 'react-router-dom'
 import { updateNGO } from '../../features/ngos/ngoSlice';
 
@@ -25,7 +23,6 @@ function UpdateNGO() {
   const { name, location, image, employeeCount, services, website, phoneNo, emailNGO } = formData;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //Version 3.1
   
   const { ngoId } = useParams()
 
@@ -36,7 +33,6 @@ function UpdateNGO() {
     });
   };
 
-  //Version 3.1
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
