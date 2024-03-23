@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getNGOs } from '../../features/ngos/ngoSlice';
+import { getNGOs, deleteNGO } from '../../features/ngos/ngoSlice';
 import React, { useState } from "react";
 import {toast} from 'react-toastify'
 import AdminHeader from '../../components/Admin/AdminHeader'
@@ -72,6 +72,21 @@ function AdminLanding() {
           });
       }
 
+      const handleNGODelete = (ngoId) => {
+        console.log(ngoId)
+        dispatch(deleteNGO(ngoId))
+          .then((response) => {
+            console.log(response)
+            toast.success('NGO Deleted Successfully');
+            window.location.reload()
+            navigate('/AdminLanding')
+          })
+          .catch((error) => {
+            toast.error(error.message);
+          });
+      }
+
+
 
     return (
         <div className="admin-landing-container">
@@ -102,7 +117,9 @@ function AdminLanding() {
                     {filteredNGO.length === 0 ? (
                         // When no NGOs are found for the admin
                         <>
-                            <button onClick={() => handleButtonClick("add")}>Add</button>
+                            <Link to={'/AddNGO/'} className='btn btn-reverse btn-sm'>
+                                            Add 
+                            </Link>
                         </>
                     ) : (
                         // When NGOs are found for the admin
@@ -113,8 +130,11 @@ function AdminLanding() {
                                         <Link to={`/ViewNGO/${ngo._id}`} className='btn btn-reverse btn-sm'>
                                             View
                                         </Link>
-                                        <button className="btn btn-sm btn-danger mx-3">Delete</button>
-                                        <button onClick={() => handleButtonClick("update")}>Update</button>
+                                        <button onClick={() => handleNGODelete(ngo._id)} className="btn btn-sm btn-danger mx-3">Delete</button>
+
+                                        <Link to={`/UpdateNGO/${ngo._id}`} className='btn btn-reverse btn-sm'>
+                                            Update  
+                                        </Link>
                                     </div>
                                 ))}
                             </div>

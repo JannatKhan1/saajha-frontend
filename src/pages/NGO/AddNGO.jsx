@@ -1,26 +1,27 @@
+//Version 3
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
-import Spinner from '../../components/Spinner'
+import { useDispatch} from 'react-redux';
 import { Navbar } from '../../components/Navbar'
+//Version 3.1
+import { addNGO } from '../../features/ngos/ngoSlice';
 
 function AddNGO() {
   const [formData, setFormData] = useState({
     name: '',
     location: '',
-    imageUrl: '',
+    image: '',
     employeeCount: '',
-    servicesOffered: '',
-    websiteUrl: '',
+    services: '',
+    website: '',
     phoneNo: '',
-    mailId: '',
+    emailNGO: '',
   });
-  const { name, location, imageUrl, employeeCount, servicesOffered, websiteUrl, phoneNo, mailId } = formData;
+  const { name, location, image, employeeCount, services, website, phoneNo, emailNGO } = formData;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
 
   const onChange = (e) => {
     setFormData({
@@ -29,14 +30,22 @@ function AddNGO() {
     });
   };
 
+  //Version 3.1
   const onSubmit = (e) => {
-    e.preventDefault();
-    navigate('/AdminLanding');
-  };
-
-  if (isLoading) {
-    return <Spinner />;
+    e.preventDefault()
+    const formData = {
+      name, location, image, employeeCount, services, website, phoneNo, emailNGO
+    }
+    dispatch(addNGO(formData))
+      .unwrap()
+      .then(() => {
+        // We got a good response so navigate the user
+        navigate('/AdminLanding')
+        toast.success('New NGO created!')
+      })
+      .catch(toast.error)
   }
+
 
   return (
     <>
@@ -77,9 +86,9 @@ function AddNGO() {
             <input
               type='text'
               className='form-control'
-              id='imageUrl'
-              name='imageUrl'
-              value={imageUrl}
+              id='image'
+              name='image'
+              value={image}
               onChange={onChange}
               placeholder='Enter image URL of your NGO'
             />
@@ -99,9 +108,9 @@ function AddNGO() {
             <input
               type='text'
               className='form-control'
-              id='servicesOffered'
-              name='servicesOffered'
-              value={servicesOffered}
+              id='services'
+              name='services'
+              value={services}
               onChange={onChange}
               placeholder='Enter services offered by your NGO'
               required
@@ -111,19 +120,21 @@ function AddNGO() {
             <input
               type='text'
               className='form-control'
-              id='websiteUrl'
-              name='websiteUrl'
-              value={websiteUrl}
+              id='website'
+              name='website'
+              value={website}
               onChange={onChange}
               placeholder='Enter URL of your website'
             />
           </div>
           <div className='form-group'>
             <input
-              type='number'
+              type='tel'
               className='form-control'
               id='phoneNo'
               name='phoneNo'
+              pattern="[0-9]{10}"
+              maxlength="10"
               value={phoneNo}
               onChange={onChange}
               placeholder='Enter phone number'
@@ -134,9 +145,9 @@ function AddNGO() {
             <input
               type='text'
               className='form-control'
-              id='mailId'
-              name='mailId'
-              value={mailId}
+              id='emailNGO'
+              name='emailNGO'
+              value={emailNGO}
               onChange={onChange}
               placeholder='Enter mail id of your ngo'
               required

@@ -1,3 +1,4 @@
+//Version 3
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -5,22 +6,28 @@ import { FaSignInAlt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
+// Version 3.1
+import { useParams} from 'react-router-dom'
+import { updateNGO } from '../../features/ngos/ngoSlice';
 
 function UpdateNGO() {
+  const { ngo } = useSelector((state) => state.ngos)
   const [formData, setFormData] = useState({
-    name: '',
-    location: '',
-    imageUrl: '',
-    employeeCount: '',
-    servicesOffered: '',
-    websiteUrl: '',
-    phoneNo: '',
-    mailId: '',
+    name: ngo.name,
+    location: ngo.location,
+    image: ngo.image,
+    employeeCount: ngo.employeeCount,
+    services: ngo.services,
+    website: ngo.website,
+    phoneNo: ngo.phoneNo,
+    emailNGO: ngo.emailNGO,
   });
-  const { name, location, imageUrl, employeeCount, servicesOffered, websiteUrl, phoneNo, mailId } = formData;
+  const { name, location, image, employeeCount, services, website, phoneNo, emailNGO } = formData;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoading } = useSelector((state) => state.volunteers);
+  //Version 3.1
+  
+  const { ngoId } = useParams()
 
   const onChange = (e) => {
     setFormData({
@@ -29,12 +36,25 @@ function UpdateNGO() {
     });
   };
 
-  const onSubmit = (e) => {
+  //Version 3.1
+  const onSubmit = async (e) => {
     e.preventDefault();
-    navigate('/AdminLanding');
+    try {
+      const response = await dispatch(updateNGO({ ngoId, ngoData: formData }));
+      if (response.payload.success) {
+        console.log('NGO Updated:', response.payload.data);
+        navigate('/AdminLanding');
+        toast.success('NGO Updated');
+      } else {
+        throw new Error(response.payload.error || 'Failed to update NGO');
+      }
+    } catch (error) {
+      console.error('Update NGO Error:', error.message);
+      toast.error('Failed to update NGO');
+    }
   };
 
-  if (isLoading) {
+  if (!ngo) {
     return <Spinner />;
   }
 
@@ -58,7 +78,6 @@ function UpdateNGO() {
               value={name}
               onChange={onChange}
               placeholder='Enter name of your NGO'
-              required
             />
           </div>
           <div className='form-group'>
@@ -70,16 +89,16 @@ function UpdateNGO() {
               value={location}
               onChange={onChange}
               placeholder='Enter location of your NGO'
-              required
+              
             />
           </div>
           <div className='form-group'>
             <input
               type='text'
               className='form-control'
-              id='imageUrl'
-              name='imageUrl'
-              value={imageUrl}
+              id='image'
+              name='image'
+              value={image}
               onChange={onChange}
               placeholder='Enter image URL of your NGO'
             />
@@ -99,47 +118,47 @@ function UpdateNGO() {
             <input
               type='text'
               className='form-control'
-              id='servicesOffered'
-              name='servicesOffered'
-              value={servicesOffered}
+              id='services'
+              name='services'
+              value={services}
               onChange={onChange}
               placeholder='Enter services offered by your NGO'
-              required
+              
             />
           </div>
           <div className='form-group'>
             <input
               type='text'
               className='form-control'
-              id='websiteUrl'
-              name='websiteUrl'
-              value={websiteUrl}
+              id='website'
+              name='website'
+              value={website}
               onChange={onChange}
               placeholder='Enter URL of your website'
             />
           </div>
           <div className='form-group'>
             <input
-              type='number'
+              type='tel'
               className='form-control'
               id='phoneNo'
               name='phoneNo'
               value={phoneNo}
               onChange={onChange}
               placeholder='Enter phone number'
-              required
+              
             />
           </div>
           <div className='form-group'>
             <input
               type='text'
               className='form-control'
-              id='mailId'
-              name='mailId'
-              value={mailId}
+              id='emailNGO'
+              name='emailNGO'
+              value={emailNGO}
               onChange={onChange}
               placeholder='Enter mail id of your ngo'
-              required
+              
             />
           </div>
           <div className='form-group'>

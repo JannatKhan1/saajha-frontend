@@ -42,7 +42,7 @@ function CaseRegister() {
           dispatch(registerCase(caseData))
             .unwrap()
             .then((casee) => {
-              toast.success(`Welcome ${casee.name}!`)
+              toast.success(`Registered new case ${casee.name} successfully!`)
               navigate('/CounsellorLanding')
             })
             .catch(toast.error)

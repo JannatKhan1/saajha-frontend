@@ -53,6 +53,7 @@ export const useCounsellorStatus = () => {
     return{loggedIn, checkingStatus}
 }
 
+//Case
 export const useCaseStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)

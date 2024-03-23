@@ -15,8 +15,10 @@ import AdminRegister from './pages/Admin/AdminRegister';
 import ViewStatus from './pages/Volunteer/ViewStatus';
 import FAQs from './pages/FAQs';
 import AdminLanding from './pages/Admin/AdminLanding';
-import {VolunteerRoute, AdminRoute, CounsellorRoute } from './components/PrivateRoute';
+import {VolunteerRoute, AdminRoute, CounsellorRoute, CaseRoute } from './components/PrivateRoute';
 import ViewNGO from './pages/NGO/ViewNGO';
+import AddNGO from './pages/NGO/AddNGO'
+import UpdateNGO from './pages/NGO/UpdateNGO'
 import ViewRequests from './pages/Admin/ViewRequests';
 import UpdateStatus from './pages/Admin/UpdateStatus';
 import ViewVolunteers from './pages/Admin/ViewVolunteers';
@@ -26,6 +28,7 @@ import CounsellorLogin from './pages/Counsellor/CounsellorLogin';
 import CounsellorLanding from './pages/Counsellor/CounsellorLanding';
 import CaseRegister from './pages/Case/CaseRegister'
 import CaseLogin from './pages/Case/CaseLogin';
+import CaseLanding from './pages/Case/CaseLanding';
 
 function App() {
   return (
@@ -60,9 +63,16 @@ function App() {
             <Route path='/AdminLogin' element={<AdminLogin/>} /> 
             
             <Route path='/AdminLanding' element={<AdminLanding/>} />
+            
             {/* NGO Routes */}
             <Route path='/ViewNGO/:ngoId' element={<AdminRoute />}>
               <Route path='/ViewNGO/:ngoId' element={<ViewNGO />} /> 
+            </Route>
+            <Route path='/AddNGO' element={<AdminRoute />}>
+               <Route path='/AddNGO' element = {<AddNGO/>} /> 
+            </Route>
+            <Route path='/UpdateNGO/:ngoId' element={<AdminRoute />}>
+               <Route path='/UpdateNGO/:ngoId' element = {<UpdateNGO/>} /> 
             </Route>
 
             {/* Volunteer Request Routes */}
@@ -96,6 +106,9 @@ function App() {
 
           {/* Case Routes   */}
           <Route path='/CaseLogin' element={<CaseLogin/>} /> 
+          <Route path='/CaseLanding' element={<CaseRoute />}>
+              <Route path='/CaseLanding' element={<CaseLanding />} /> 
+          </Route>
           </Routes>
       </div>
       </Router>
