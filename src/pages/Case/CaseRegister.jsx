@@ -154,7 +154,7 @@ function CaseRegister() {
          
           <div className='form-group'>
             <input
-              type='number'
+              type='tel'
               className='form-control'
               id='guardianPhone'
               name='guardianPhone'

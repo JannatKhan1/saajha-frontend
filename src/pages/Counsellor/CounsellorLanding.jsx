@@ -8,7 +8,7 @@ function CounsellorLanding() {
   return (
     <>
       <CounsellorHeader />
-      <Link to='/RegisterCase' className='btn btn-reverse btn-sm'>
+      <Link to='/CaseRegister' className='btn btn-reverse btn-sm'>
                 Register Case
       </Link>
     </>

@@ -24,6 +24,7 @@ import AddRequirements from './pages/Admin/AddRequirements';
 import CounsellorRegister from './pages/Counsellor/CounsellorRegister';
 import CounsellorLogin from './pages/Counsellor/CounsellorLogin';
 import CounsellorLanding from './pages/Counsellor/CounsellorLanding';
+import CaseRegister from './pages/Case/CaseRegister'
 
 function App() {
   return (
@@ -82,11 +83,14 @@ function App() {
           <Route path='/CounsellorRegister' element={<AdminRoute />}>
               <Route path='/CounsellorRegister' element={<CounsellorRegister />} /> 
           </Route>
+          
           {/* Counsellor Routes */}
           <Route path='/CounsellorLogin' element={<CounsellorLogin/>} /> 
-          
           <Route path='/CounsellorLanding' element={<CounsellorRoute />}>
               <Route path='/CounsellorLanding' element={<CounsellorLanding />} /> 
+          </Route>
+          <Route path='/CaseRegister' element={<CounsellorRoute />}>
+              <Route path='/CaseRegister' element={<CaseRegister />} /> 
           </Route>
           </Routes>
       </div>

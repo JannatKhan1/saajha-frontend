@@ -71,7 +71,7 @@ function CounsellorRegister() {
               name='name'
               value={name}
               onChange={onChange}
-              placeholder='Enter your Name'
+              placeholder="Enter Counsellor's Name"
               required
             />
           </div>
@@ -83,7 +83,7 @@ function CounsellorRegister() {
               name='dob'
               value={dob}
               onChange={onChange}
-              placeholder='Enter your Date of Birth'
+              placeholder="Enter Counsellor's Date of Birth"
               required
             />
           </div>
@@ -95,7 +95,7 @@ function CounsellorRegister() {
               name='email'
               value={email}
               onChange={onChange}
-              placeholder='Enter your email address'
+              placeholder="Enter Counsellor's email address"
               required
             />
           </div>
@@ -131,7 +131,7 @@ function CounsellorRegister() {
               name='gender'
               value={gender}
               onChange={onChange}
-              placeholder='Enter your gender'
+              placeholder="Enter Counsellor's gender"
               required
             />
           </div>
@@ -143,7 +143,7 @@ function CounsellorRegister() {
               name='certification'
               value={certification}
               onChange={onChange}
-              placeholder='Enter your certification'
+              placeholder="Enter Counsellor's Certification"
               required
             />
           </div>
@@ -155,7 +155,7 @@ function CounsellorRegister() {
               name='specialisation'
               value={specialisation}
               onChange={onChange}
-              placeholder='Enter your specialisation'
+              placeholder="Enter Counsellor's Specialisation"
               required
             />
           </div>

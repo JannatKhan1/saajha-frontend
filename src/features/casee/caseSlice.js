@@ -16,7 +16,7 @@ export const registerCase = createAsyncThunk(
   async (casee, thunkAPI) => {
     try {
       const token = thunkAPI.getState().counsellors.counsellor.token
-      return await caseService.registerCase(casee)
+      return await caseService.registerCase(casee,token)
     } catch (error) {
       return thunkAPI.rejectWithValue(extractErrorMessage(error))
     }

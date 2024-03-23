@@ -9,10 +9,10 @@ const registerCase = async (caseData,token) => {
       Authorization: `Bearer ${token}`,
     },
   }
-  const response = await axios.post(API_URL, caseData,config)
+  const response = await axios.post(API_URL, caseData, config)
 
   if (response.data) {
-    localStorage.setItem('case', JSON.stringify(response.data))
+    localStorage.setItem('casee', JSON.stringify(response.data))
   }
   return response.data
 }
@@ -22,13 +22,13 @@ const loginCase = async (caseData) => {
   const response = await axios.post(API_URL + 'login', caseData)
 
   if (response.data) {
-    localStorage.setItem('case', JSON.stringify(response.data))
+    localStorage.setItem('casee', JSON.stringify(response.data))
   }
   return response.data
 }
 
 // Logout case
-const logoutCase = () => localStorage.removeItem('case')
+const logoutCase = () => localStorage.removeItem('casee')
 
 const caseService = {
   registerCase,
