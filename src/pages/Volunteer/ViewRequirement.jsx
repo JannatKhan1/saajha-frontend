@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getRequirement } from '../../features/requirements/requirementSlice'
 import { useParams} from 'react-router-dom'
 import Header from '../../components/Volunteer/Header'
-//Version 3
 import '../../index.css'
 
 
@@ -23,7 +22,6 @@ function ViewRequirement() {
   const { requirement } = useSelector((state) => state.requirements);
 
   // Check if requirement is an array and has at least one element
-  //Version 2
   if (!requirement || !requirement.length) {
     return (
       <>

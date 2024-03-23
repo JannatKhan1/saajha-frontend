@@ -10,18 +10,20 @@ import Landing from './pages/Volunteer/Landing';
 import ViewRequirement from './pages/Volunteer/ViewRequirement'
 import VolunteerRegister from './pages/Volunteer/VolunteerRegister';
 import VolunteerLogin from './pages/Volunteer/VolunteerLogin';
-import { VolunteerRoute } from './components/PrivateRoute';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminRegister from './pages/Admin/AdminRegister';
 import ViewStatus from './pages/Volunteer/ViewStatus';
 import FAQs from './pages/FAQs';
 import AdminLanding from './pages/Admin/AdminLanding';
-import { AdminRoute } from './components/PrivateRoute';
+import {VolunteerRoute, AdminRoute, CounsellorRoute } from './components/PrivateRoute';
 import ViewNGO from './pages/NGO/ViewNGO';
 import ViewRequests from './pages/Admin/ViewRequests';
 import UpdateStatus from './pages/Admin/UpdateStatus';
 import ViewVolunteers from './pages/Admin/ViewVolunteers';
 import AddRequirements from './pages/Admin/AddRequirements';
+import CounsellorRegister from './pages/Counsellor/CounsellorRegister';
+import CounsellorLogin from './pages/Counsellor/CounsellorLogin';
+import CounsellorLanding from './pages/Counsellor/CounsellorLanding';
 
 function App() {
   return (
@@ -54,7 +56,6 @@ function App() {
             {/* Admin Routes */}
             <Route path='/AdminRegister' element={<AdminRegister/>} />
             <Route path='/AdminLogin' element={<AdminLogin/>} /> 
-            {/* Version 3 */}
             
             <Route path='/AdminLanding' element={<AdminLanding/>} />
             {/* NGO Routes */}
@@ -76,7 +77,17 @@ function App() {
               <Route path='/AddRequirements' element={<AddRequirements />} /> 
             </Route>
           <Route path='/requirement/:adminId' element = {<ViewRequirement/>} /> 
-         
+
+          {/* Counsellor-Admin Routes */}
+          <Route path='/CounsellorRegister' element={<AdminRoute />}>
+              <Route path='/CounsellorRegister' element={<CounsellorRegister />} /> 
+          </Route>
+          {/* Counsellor Routes */}
+          <Route path='/CounsellorLogin' element={<CounsellorLogin/>} /> 
+          
+          <Route path='/CounsellorLanding' element={<CounsellorRoute />}>
+              <Route path='/CounsellorLanding' element={<CounsellorLanding />} /> 
+          </Route>
           </Routes>
       </div>
       </Router>

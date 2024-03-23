@@ -1,5 +1,4 @@
 import React from 'react';
-//Version 3
 import '../index.css'
 import defaultImage from '../assets/default_ngo.png'
 

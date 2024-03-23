@@ -1,15 +1,15 @@
 import { FaSignOutAlt} from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { logoutAdmin } from '../../features/admins/adminSlice'
+import { logoutCounsellor } from '../../features/counsellors/counsellorSlice' 
 import '../../index.css'
 
-function AdminHeader() {
+function CounsellorHeader() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const onLogout = () => {
-    dispatch(logoutAdmin())
+    dispatch(logoutCounsellor())
     navigate('/')
   }
  
@@ -28,4 +28,4 @@ function AdminHeader() {
     </nav>
   )
 }
-export default AdminHeader
+export default CounsellorHeader

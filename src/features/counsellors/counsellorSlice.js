@@ -15,8 +15,8 @@ export const registerCounsellor = createAsyncThunk(
   'counsellor/register',
   async (counsellor, thunkAPI) => {
     try {
-      const token = thunkAPI.getState().counsellors.counsellor.token
-      return await counsellorService.registerCounsellor(counsellor)
+      const token = thunkAPI.getState().admins.admin.token
+      return await counsellorService.registerCounsellor(counsellor,token)
     } catch (error) {
       return thunkAPI.rejectWithValue(extractErrorMessage(error))
     }

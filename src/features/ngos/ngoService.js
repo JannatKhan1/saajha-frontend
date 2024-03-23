@@ -10,7 +10,6 @@ const getNGOs = async () => {
   return response.data
 }
 
-//Version 3
 // Get NGO by ID
 const getNGO = async (ngoId, token) => {
   const config = {
@@ -26,7 +25,6 @@ const getNGO = async (ngoId, token) => {
 
 const ngoService = {
   getNGOs,
-  //Version 3
   getNGO,
 }
 

@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { GrUserAdmin } from 'react-icons/gr'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { registerAdmin } from '../../features/admins/adminSlice'
-import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
-//Version 3
 import '../../index.css'
 
 function AdminRegister() {
@@ -20,7 +18,6 @@ function AdminRegister() {
   const { name, email, password, password2,phone } = formData
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { isLoading } = useSelector((state) => state.admins)
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -46,9 +43,6 @@ function AdminRegister() {
         })
         .catch(toast.error)
     }
-  }
-  if (isLoading) {
-    return <Spinner />
   }
 
   return (

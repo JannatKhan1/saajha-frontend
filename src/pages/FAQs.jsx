@@ -1,4 +1,3 @@
-//Version 2
 import '../index.css'
 import { Navbar } from '../components/Navbar';
 import { useState } from 'react';

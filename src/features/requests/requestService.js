@@ -1,4 +1,3 @@
-//Version 3
 import axios from 'axios'
 
 const API_URL = 'https://saajha-backend-2.onrender.com/api/requests/'

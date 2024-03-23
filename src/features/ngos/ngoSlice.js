@@ -29,7 +29,7 @@ export const getNGOs = createAsyncThunk(
   }
 )
 
-//Version 3
+
 // Get NGO by ID
 export const getNGO = createAsyncThunk(
   'ngos/get',
@@ -71,8 +71,6 @@ export const ngoSlice = createSlice({
         state.isError = true
         state.message = action.payload
       })
-
-      //Version 3
       .addCase(getNGO.pending, (state) => {
         state.isLoading = true
       })

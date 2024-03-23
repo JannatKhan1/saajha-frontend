@@ -15,7 +15,7 @@ const createApplication = async (applicationData, ngoId, token) => {
   return response.data
 }
 
-//Version 2
+
 // Get volunteer applications
 const getApplications = async (token) => {
   const config = {

@@ -1,5 +1,3 @@
-//Version 2
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import applicationService from './applicationService'
 

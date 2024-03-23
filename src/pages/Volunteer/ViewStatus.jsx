@@ -1,11 +1,8 @@
-//Version 2
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getApplications } from '../../features/applications/applicationSlice';
 import { useParams } from 'react-router-dom';
 import Header from '../../components/Volunteer/Header';
-
-//Version 3
 import '../../indext.css';
 
 function ViewStatus() {

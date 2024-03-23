@@ -1,4 +1,3 @@
-//Version 3
 import { useEffect } from 'react'
 import { toast } from 'react-toastify'
 import { useSelector, useDispatch } from 'react-redux'

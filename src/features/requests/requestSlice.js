@@ -1,4 +1,3 @@
-//Version 3
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import requestService from './requestService'
 import { extractErrorMessage } from '../../utils'

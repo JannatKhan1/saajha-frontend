@@ -1,9 +1,8 @@
-//Version 3
 import React, { useState, useRef } from 'react';
 import './saajha.css';
 import ngoImage from '../assets/log.png';
-import ngoImage1 from '../assets/k.png';  // Corrected import path
-import ngoImage2 from '../assets/m.png';  // Corrected import path
+import ngoImage1 from '../assets/k.png'; 
+import ngoImage2 from '../assets/m.png';  
 import icon1 from '../assets/i.png';
 import icon2 from '../assets/n.png';
 import icon3 from '../assets/w.png';

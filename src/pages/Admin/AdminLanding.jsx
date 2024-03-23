@@ -1,10 +1,7 @@
-//Version 3 - temporary
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getNGOs } from '../../features/ngos/ngoSlice';
-
-// Version 3
 import React, { useState } from "react";
 import {toast} from 'react-toastify'
 import AdminHeader from '../../components/Admin/AdminHeader'

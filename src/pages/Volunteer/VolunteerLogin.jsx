@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { loginVolunteer } from '../../features/volunteers/volunteerSlice'
 import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
-//Version 3
 import '../../index.css'
 
 

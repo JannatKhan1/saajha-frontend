@@ -2,8 +2,6 @@ import { FaSignOutAlt} from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { logoutVolunteer } from '../../features/volunteers/volunteerSlice'
-
-//Version 3
 import '../../index.css'
 
 

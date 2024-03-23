@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import {RiAdminFill} from 'react-icons/ri'
 import { useSelector, useDispatch } from 'react-redux'
 import { loginAdmin } from '../../features/admins/adminSlice'
-import Spinner from '../../components/Spinner'
 import { Navbar } from '../../components/Navbar'
-//Version 3
 import '../../index.css'
 
 function AdminLogin() {
@@ -42,9 +40,7 @@ function AdminLogin() {
       })
       .catch(toast.error)
   }
-  if (isLoading) {
-    return <Spinner />
-  }
+  
 
   return (
     <>

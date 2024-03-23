@@ -30,10 +30,10 @@ const loginCounsellor = async (counsellorData) => {
 // Logout counsellor
 const logoutCounsellor = () => localStorage.removeItem('counsellor')
 
-const adminService = {
-  registerAdmin,
-  logoutAdmin,
-  loginAdmin,
+const counsellorService = {
+  registerCounsellor,
+  logoutCounsellor,
+  loginCounsellor,
 }
 
-export default adminService
+export default counsellorService

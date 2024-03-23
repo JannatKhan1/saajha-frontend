@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import {useSelector} from 'react-redux'
 
+//Volunteer
 export const useAuthStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)
@@ -17,7 +18,7 @@ export const useAuthStatus = () => {
     return{loggedIn, checkingStatus}
 }
 
-//Version 3
+//Admin
 export const useAdminStatus = () => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [checkingStatus, setCheckingStatus] = useState(true)
@@ -34,3 +35,36 @@ export const useAdminStatus = () => {
     return{loggedIn, checkingStatus}
 }
 
+//Counsellor
+
+export const useCounsellorStatus = () => {
+    const [loggedIn, setLoggedIn] = useState(false)
+    const [checkingStatus, setCheckingStatus] = useState(true)
+
+    const {counsellor} = useSelector((state)=> state.counsellors)
+    useEffect(()=>{
+        if(counsellor){
+            setLoggedIn(true)
+        }else {
+            setLoggedIn(false)
+        }
+        setCheckingStatus(false)
+    },[counsellor]) 
+    return{loggedIn, checkingStatus}
+}
+
+export const useCaseStatus = () => {
+    const [loggedIn, setLoggedIn] = useState(false)
+    const [checkingStatus, setCheckingStatus] = useState(true)
+
+    const {casee } = useSelector((state)=> state.casee)
+    useEffect(()=>{
+        if(casee){
+            setLoggedIn(true)
+        }else {
+            setLoggedIn(false)
+        }
+        setCheckingStatus(false)
+    },[casee]) 
+    return{loggedIn, checkingStatus}
+}
