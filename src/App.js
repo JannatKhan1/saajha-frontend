@@ -25,6 +25,7 @@ import CounsellorRegister from './pages/Counsellor/CounsellorRegister';
 import CounsellorLogin from './pages/Counsellor/CounsellorLogin';
 import CounsellorLanding from './pages/Counsellor/CounsellorLanding';
 import CaseRegister from './pages/Case/CaseRegister'
+import CaseLogin from './pages/Case/CaseLogin';
 
 function App() {
   return (
@@ -92,6 +93,9 @@ function App() {
           <Route path='/CaseRegister' element={<CounsellorRoute />}>
               <Route path='/CaseRegister' element={<CaseRegister />} /> 
           </Route>
+
+          {/* Case Routes   */}
+          <Route path='/CaseLogin' element={<CaseLogin/>} /> 
           </Routes>
       </div>
       </Router>
