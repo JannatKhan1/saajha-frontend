@@ -7,7 +7,7 @@ import Spinner from '../../components/Spinner'
 import CounsellorHeader  from '../../components/Counsellor/CounsellorHeader'
 import { getAll } from '../../features/actions/actionSlice'
 import { toast } from 'react-toastify'
-import '../../indext.css'
+import '../../indexs.css'
 
 
 function CaseAction() {
@@ -57,17 +57,14 @@ function CaseAction() {
  
             <td>
             <Link
-              className="btn btn-block"
             >Update Case Details</Link>
             </td>
             <td>
             <Link
-              className="btn btn-block"
             > Add Remarks </Link>
             </td>
             <td>
             <Link
-              className="btn btn-block"
             > View Case Details </Link>
             </td>
           </tr>
