@@ -39,6 +39,8 @@ export const logoutCase = createAction('casee/logout', () => {
 })
 
 
+
+
 export const caseSlice = createSlice({
   name: 'casee',
   initialState,
@@ -69,6 +71,7 @@ export const caseSlice = createSlice({
       .addCase(loginCase.rejected, (state) => {
         state.isLoading = false
       })
+
   },
 })
 

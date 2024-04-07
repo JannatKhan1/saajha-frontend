@@ -7,6 +7,7 @@ import applicationReducer from '../features/applications/applicationSlice'
 import requestReducer from '../features/requests/requestSlice'
 import caseReducer from '../features/casee/caseSlice'
 import counsellorReducer from '../features/counsellors/counsellorSlice'
+import actionReducer from '../features/actions/actionSlice'
 
 export const store = configureStore({
   reducer: {
@@ -18,5 +19,6 @@ export const store = configureStore({
     requests: requestReducer,
     casee: caseReducer,
     counsellors: counsellorReducer,
+    actions: actionReducer,
   },
 });

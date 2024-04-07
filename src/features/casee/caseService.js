@@ -30,10 +30,12 @@ const loginCase = async (caseData) => {
 // Logout case
 const logoutCase = () => localStorage.removeItem('casee')
 
+
+
 const caseService = {
   registerCase,
   loginCase,
-  logoutCase
+  logoutCase,
 }
 
 export default caseService

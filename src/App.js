@@ -29,6 +29,7 @@ import CounsellorLanding from './pages/Counsellor/CounsellorLanding';
 import CaseRegister from './pages/Case/CaseRegister'
 import CaseLogin from './pages/Case/CaseLogin';
 import CaseLanding from './pages/Case/CaseLanding';
+import CaseAction from './pages/Counsellor/CaseAction';
 
 function App() {
   return (
@@ -102,6 +103,9 @@ function App() {
           </Route>
           <Route path='/CaseRegister' element={<CounsellorRoute />}>
               <Route path='/CaseRegister' element={<CaseRegister />} /> 
+          </Route>
+          <Route path='/CaseAction/:counsellorId' element={<CounsellorRoute />}>
+              <Route path='/CaseAction/:counsellorId' element={<CaseAction />} /> 
           </Route>
 
           {/* Case Routes   */}
