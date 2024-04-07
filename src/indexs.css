@@ -75,3 +75,61 @@ body {
   .close:hover {
     color: #000; /* Change color on hover if desired */
   }
+
+/* Counsellor Landing Page */
+.counsellor-case-landing{
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.options-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;  
+  border: 1px solid #ccc;  
+  border-radius: 5px;
+  padding: 10px;  margin: 0 auto; 
+  width: 500px;
+}
+  
+
+.option-button {
+  margin: 10px 0;  
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 250px
+}
+
+.btn-reverse {
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* White text */
+}
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background: #000;
+  color: 895737;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

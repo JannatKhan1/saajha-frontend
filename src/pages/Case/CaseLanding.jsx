@@ -1,14 +1,21 @@
 import React from 'react';
 import CaseHeader from '../../components/Case/CaseHeader';
 
-import '../../index.css';
+import '../../indexs.css';
 
 function CaseLanding() {
 
   return (
     <>
       <CaseHeader />
-      <p>Warm Welcome Case !</p>
+      <div className="counsellor-case-landing">
+      <h1>Welcome, Case</h1>
+      <div className="options-container">
+
+        <button className="option-button">View Remarks</button>
+        <button className="option-button">View Your Details</button>
+      </div>
+    </div>
     </>
   );
 }
