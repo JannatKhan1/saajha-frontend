@@ -12,8 +12,15 @@ function CounsellorLanding() {
       <div className="counsellor-case-landing">
         <h1>Welcome, Counsellor</h1>
         <div className="options-container">
-        <button className="option-button">Update Your Details</button>
-        <button className="option-button">View Your Details</button>
+        
+        <Link to={`/UpdateCounsellor/${counsellorId}`} className='btn btn-reverse btn-sm'>
+              Update Your Details
+        </Link>
+
+        <Link to={`/ViewCounsellor/${counsellorId}`} className='btn btn-reverse btn-sm'>
+          View Your Details
+        </Link>
+
         <Link to='/CaseRegister' className='btn btn-reverse btn-sm'>
                 Register Case
         </Link>

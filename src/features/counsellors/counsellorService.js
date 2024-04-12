@@ -30,10 +30,25 @@ const loginCounsellor = async (counsellorData) => {
 // Logout counsellor
 const logoutCounsellor = () => localStorage.removeItem('counsellor')
 
+//VERSION 4
+
+//View Counsellor Details
+
+const getCounsellor = async (counsellorId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  const response = await axios.get(API_URL + counsellorId, config)
+  return response.data
+}
+
 const counsellorService = {
   registerCounsellor,
   logoutCounsellor,
   loginCounsellor,
+  getCounsellor,
 }
 
 export default counsellorService

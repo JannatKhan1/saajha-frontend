@@ -56,11 +56,11 @@ function CaseAction() {
             <td>{action.email}</td>
  
             <td>
-            <Link
+            <Link to={`/UpdateCase/${action._id}`}
             >Update Case Details</Link>
             </td>
             <td>
-            <Link
+            <Link to={`/AddRemarks/${action._id}`}
             > Add Remarks </Link>
             </td>
             <td>

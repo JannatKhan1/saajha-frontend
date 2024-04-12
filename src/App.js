@@ -30,6 +30,10 @@ import CaseRegister from './pages/Case/CaseRegister'
 import CaseLogin from './pages/Case/CaseLogin';
 import CaseLanding from './pages/Case/CaseLanding';
 import CaseAction from './pages/Counsellor/CaseAction';
+import UpdateCase from './pages/Counsellor/UpdateCase';
+import AddRemarks from './pages/Counsellor/AddRemarks'
+import UpdateCounsellor from './pages/Counsellor/UpdateCounsellor'
+import ViewCounsellor from './pages/Counsellor/ViewCounsellor';
 
 function App() {
   return (
@@ -101,11 +105,25 @@ function App() {
           <Route path='/CounsellorLanding' element={<CounsellorRoute />}>
               <Route path='/CounsellorLanding' element={<CounsellorLanding />} /> 
           </Route>
+          <Route path='/UpdateCounsellor/:counsellorId' element={<CounsellorRoute />}>
+              <Route path='/UpdateCounsellor/:counsellorId' element={<UpdateCounsellor />} /> 
+          </Route>
+          <Route path='/ViewCounsellor/:counsellorId' element={<CounsellorRoute />}>
+              <Route path='/ViewCounsellor/:counsellorId' element={<ViewCounsellor />} /> 
+          </Route>
+
+          {/* Counsellor-Case Routes */}
           <Route path='/CaseRegister' element={<CounsellorRoute />}>
               <Route path='/CaseRegister' element={<CaseRegister />} /> 
           </Route>
           <Route path='/CaseAction/:counsellorId' element={<CounsellorRoute />}>
               <Route path='/CaseAction/:counsellorId' element={<CaseAction />} /> 
+          </Route>
+          <Route path='/UpdateCase/:actionId' element={<CounsellorRoute />}>
+              <Route path='/UpdateCase/:actionId' element={<UpdateCase />} /> 
+          </Route>
+          <Route path='/AddRemarks/:actionId' element={<CounsellorRoute />}>
+              <Route path='/AddRemarks/:actionId' element={<AddRemarks />} /> 
           </Route>
 
           {/* Case Routes   */}
