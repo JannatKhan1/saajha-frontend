@@ -37,10 +37,10 @@ export const addRemarks = createAsyncThunk(
 // Get case remarks
 export const getRemarks = createAsyncThunk(
   'remarks/getRemarks',
-  async (id, thunkAPI) => {
+  async (caseId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().counsellors.counsellor.token
-      return await remarkService.getRemarks(id,token)
+      return await remarkService.getRemarks(caseId,token)
     } catch (error) {
       const message =
         (error.response &&

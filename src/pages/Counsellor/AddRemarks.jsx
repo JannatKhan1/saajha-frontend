@@ -65,11 +65,10 @@ function AddRemarks() {
       report,
       SuggestionsForFurtherInvestigation
     }
-    dispatch(addRemarks({remarkData: formData, id: caseId}))
+    dispatch(addRemarks({remarkData: formData, caseId: caseId})) 
       .unwrap()
       .then(() => {
-
-        navigate('/CaseAction')
+        navigate(-1)
         toast.success('Remarks Added')
       })
       .catch(toast.error)
