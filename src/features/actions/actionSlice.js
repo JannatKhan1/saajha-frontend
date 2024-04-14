@@ -32,6 +32,25 @@ export const getAll = createAsyncThunk(
     }
   )
 
+// Add Remarks
+export const addRemarks = createAsyncThunk(
+  'casee/addRemarks',
+  async ({remarkData,id}, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().counsellors.counsellor.token
+      return await actionService.addRemarks(remarkData,id, token)
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+
+      return thunkAPI.rejectWithValue(message)
+    }
+  }
+)
 
 export const actionSlice = createSlice({
   name: 'action',
@@ -54,7 +73,18 @@ export const actionSlice = createSlice({
         state.isError = true
         state.message = action.payload
       })
-      
+      .addCase(addRemarks.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(addRemarks.fulfilled, (state) => {
+        state.isLoading = false
+        state.isSuccess = true
+      })
+      .addCase(addRemarks.rejected, (state, action) => {
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
+      })
   },
 })
 

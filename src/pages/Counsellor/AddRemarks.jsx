@@ -1,11 +1,11 @@
 // VERSION 4
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { Navbar } from '../../components/Navbar';
-
+import { addRemarks } from '../../features/actions/actionSlice';
 
 function AddRemarks() {
   const [formData, setFormData] = useState({
@@ -21,6 +21,8 @@ function AddRemarks() {
     report: '',
     SuggestionsForFurtherInvestigation: ''
   });
+
+  const {actionId} = useParams();
 
   const {
     developmentalHistory,
@@ -50,7 +52,7 @@ function AddRemarks() {
   const onSubmit = (e) => {
     e.preventDefault();
     
-    const caseData = {
+    const formData = {
       developmentalHistory,
       presentComplaints,
       advice,
@@ -63,7 +65,14 @@ function AddRemarks() {
       report,
       SuggestionsForFurtherInvestigation
     }
+    dispatch(addRemarks({remarkData: formData, id: actionId}))
+      .unwrap()
+      .then(() => {
 
+        navigate('/CaseAction')
+        toast.success('Remarks Added')
+      })
+      .catch(toast.error)
     
   };
 
