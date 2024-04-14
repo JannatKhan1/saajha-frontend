@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { Navbar } from '../../components/Navbar';
-import { addRemarks } from '../../features/actions/actionSlice';
+import { addRemarks } from '../../features/remarks/remarkSlice';
 
 function AddRemarks() {
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ function AddRemarks() {
     SuggestionsForFurtherInvestigation: ''
   });
 
-  const {actionId} = useParams();
+  const {caseId} = useParams();
 
   const {
     developmentalHistory,
@@ -65,7 +65,7 @@ function AddRemarks() {
       report,
       SuggestionsForFurtherInvestigation
     }
-    dispatch(addRemarks({remarkData: formData, id: actionId}))
+    dispatch(addRemarks({remarkData: formData, id: caseId}))
       .unwrap()
       .then(() => {
 
