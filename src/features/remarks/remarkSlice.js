@@ -39,8 +39,7 @@ export const getRemarks = createAsyncThunk(
   'remarks/getRemarks',
   async (caseId, thunkAPI) => {
     try {
-      const token = thunkAPI.getState().counsellors.counsellor.token
-      return await remarkService.getRemarks(caseId,token)
+      return await remarkService.getRemarks(caseId)
     } catch (error) {
       const message =
         (error.response &&

@@ -19,14 +19,10 @@ const addRemarks = async (remarkData, caseId, token) => {
 }
 
 // Get all cases remark
-const getRemarks = async (caseId,token) => {
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  }
+const getRemarks = async (caseId) => {
+  
 
-  const response = await axios.get(API_URL + caseId, config)
+  const response = await axios.get(API_URL + caseId)
 
   return response.data
 }

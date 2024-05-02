@@ -126,9 +126,7 @@ function App() {
           <Route path='/AddRemarks/:caseId' element={<CounsellorRoute />}>
               <Route path='/AddRemarks/:caseId' element={<AddRemarks />} /> 
           </Route>
-          <Route path='/ViewRemarks/:caseId' element={<CounsellorRoute />}>
-              <Route path='/ViewRemarks/:caseId' element={<ViewRemarks />} /> 
-            </Route>
+          <Route path='/ViewRemarks/:caseId' element={<ViewRemarks />} /> 
 
           {/* Case Routes   */}
           <Route path='/CaseLogin' element={<CaseLogin/>} /> 
