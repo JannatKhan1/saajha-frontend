@@ -34,6 +34,7 @@ import UpdateCase from './pages/Counsellor/UpdateCase';
 import AddRemarks from './pages/Counsellor/AddRemarks'
 import UpdateCounsellor from './pages/Counsellor/UpdateCounsellor'
 import ViewCounsellor from './pages/Counsellor/ViewCounsellor';
+import ViewRemarks from './pages/Counsellor/ViewRemarks';
 
 function App() {
   return (
@@ -125,6 +126,9 @@ function App() {
           <Route path='/AddRemarks/:caseId' element={<CounsellorRoute />}>
               <Route path='/AddRemarks/:caseId' element={<AddRemarks />} /> 
           </Route>
+          <Route path='/ViewRemarks/:caseId' element={<CounsellorRoute />}>
+              <Route path='/ViewRemarks/:caseId' element={<ViewRemarks />} /> 
+            </Route>
 
           {/* Case Routes   */}
           <Route path='/CaseLogin' element={<CaseLogin/>} /> 

@@ -64,8 +64,8 @@ function CaseAction() {
             > Add Remarks </Link>
             </td>
             <td>
-            <Link
-            > View Case Details </Link>
+            <Link to={`/ViewRemarks/${action._id}`}
+            > View Case Remarks </Link>
             </td>
           </tr>
         ))}
