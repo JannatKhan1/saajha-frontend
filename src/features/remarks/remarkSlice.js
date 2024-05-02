@@ -79,7 +79,7 @@ export const remarkSlice = createSlice({
       .addCase(getRemarks.fulfilled, (state, action) => {
         state.isLoading = false
         state.isSuccess = true
-        state.requests = action.payload
+        state.remarks = action.payload
       })
       .addCase(getRemarks.rejected, (state, action) => {
         state.isLoading = false
