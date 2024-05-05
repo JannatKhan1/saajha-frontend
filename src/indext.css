@@ -14,9 +14,7 @@
   font-size: 16px;
   line-height: 1.5;
 }
-.status-title{
 
-}
 .status {
   background-color: #333;
   color: #fff;
@@ -48,9 +46,9 @@
 
 /* view request page css */
 
- 
+ .btn-block{
+  
 
-.btn-block{
 action-button {
 background-color: green;
 color: white;
@@ -133,3 +131,12 @@ margin-top: 0;
 }
 
 }
+
+.hi, .hello{
+  font-family: Arial, sans-serif; /* Change font family */
+  font-weight: bold; /* Make text bold */
+  text-align: center;
+  padding-top: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+  }

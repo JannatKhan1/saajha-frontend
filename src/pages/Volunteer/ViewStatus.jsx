@@ -43,7 +43,7 @@ function ViewStatus() {
       <div className="status-box">
       <div>{firstApplication.description}</div>
       <p>Your application status is: </p>
-      <div className={`status status-${firstApplication.status}`}>{firstApplication.status}</div>
+      <center><div className={`status status-${firstApplication.status}`}>{firstApplication.status}</div></center>
       </div>
     </div>
     </>

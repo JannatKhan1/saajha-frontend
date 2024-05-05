@@ -93,7 +93,7 @@
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #5E3023;
   position: sticky;
@@ -110,43 +110,20 @@ nav .nav-title{
   color: white;
 }
 
-nav ul {
+nav div {
   display: flex;
 }
 
-nav ul li {
-  list-style: none;
-}
-
-nav ul li a{
+nav a {
   display: block;
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  margin: 0 0.5rem;
   border-radius: 0.5rem;
 }
 
-nav ul li a:not(.active):hover{
-  background-color: #895737;
-}
-
-nav .menu {
-  display: none;
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2.25rem;
-  height: 2rem;
-}
-
-nav .menu span {
-  height: 0.4rem;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 0.2rem;
+nav a:hover {
+  background-color: #895737 /* Adjust the hover color as needed */
 }
 
 .card-image-anika {
@@ -642,4 +619,17 @@ text-align: justify;
   border-color: #000 transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
+}
+
+/* Toast Close Button */
+.Toastify__close-button:hover {
+  text-align: right;
+}
+
+.Toastify__close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: height;
+  padding: 4px; 
 }

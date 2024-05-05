@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { logoutVolunteer } from '../../features/volunteers/volunteerSlice'
 import '../../index.css'
+import '../../indexs.css'
 
 
 function Header() {
@@ -19,13 +20,9 @@ function Header() {
         <Link to='/' className='nav-title'>
             Saajha
         </Link>
-        <ul>
-        <li>
-            <button className='btn btn-reverse' onClick={onLogout}>
+            <button className='logout' onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
-          </li>
-        </ul>
     </nav>
   )
 }

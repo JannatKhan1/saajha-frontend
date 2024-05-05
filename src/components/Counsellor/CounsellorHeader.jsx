@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { logoutCounsellor } from '../../features/counsellors/counsellorSlice' 
 import '../../index.css'
+import '../../indexs.css'
 
 function CounsellorHeader() {
   const navigate = useNavigate()
@@ -18,13 +19,9 @@ function CounsellorHeader() {
         <Link to='/' className='nav-title'>
             Saajha
         </Link>
-        <ul>
-        <li>
-            <button className='btn btn-reverse' onClick={onLogout}>
+            <button className='logout' onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
-          </li>
-        </ul>
     </nav>
   )
 }

@@ -5,6 +5,7 @@ import { MdVolunteerActivism } from "react-icons/md";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { FaUserDoctor } from "react-icons/fa6";
 import {Navbar} from './Navbar'
+//Version 3
 import '../index.css'
 
 function CardItemLogin() {
@@ -14,15 +15,15 @@ function CardItemLogin() {
       icon:<FaUser /> ,
       imgAlt: 'User',
       title: 'User',
-      description: 'Description of User',
+      description: 'Can search for various NGOs and enroll patients in specific NGOs',
       loginbutton: 'Login',
-      loginButtonLink: '/CaseLogin',
+      loginButtonLink: '/UserLogin',
     },
     {
       icon: <MdVolunteerActivism />,
       imgAlt: 'Volunteer',
       title: 'Volunteer',
-      description: 'Description of Volunteer',
+      description: 'Can enroll themselves in a particular NGO to assist staff with NGO activities.',
       loginbutton: 'Login',
       signupbutton: 'Sign Up',
       loginButtonLink: '/VolunteerLogin',
@@ -32,7 +33,7 @@ function CardItemLogin() {
       icon: <MdOutlineAdminPanelSettings />,
       imgAlt: 'Admin',
       title: 'Admin',
-      description: 'Description of Admin',
+      description: 'Can add NGO details to the portal, assign volunteers to cases, and manage overall NGO information.',
       loginbutton: 'Login',
       signupbutton: 'Sign Up',
       loginButtonLink: '/AdminLogin',
@@ -44,7 +45,7 @@ function CardItemLogin() {
         icon: <FaUserDoctor />,
         imgAlt: 'Counsellor',
         title: 'Counsellor',
-        description: 'Description of Counsellor',
+        description: 'Can maintain patient records, progress reports and medical histories.',
         loginbutton: 'Login',
         loginButtonLink: '/CounsellorLogin',
     

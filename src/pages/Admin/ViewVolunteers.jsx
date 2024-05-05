@@ -5,6 +5,8 @@ import Spinner from '../../components/Spinner'
 import AdminHeader from '../../components/Admin/AdminHeader'
 import { getRequests } from '../../features/requests/requestSlice'
 import { toast } from 'react-toastify'
+import '../../indexs.css';
+
 
 
 function ViewVolunteers() {
@@ -37,9 +39,9 @@ function ViewVolunteers() {
   return (
     <>
       <AdminHeader/>
-      <h1>View Volunteers</h1>
-      <table style={{ width:'100%', borderCollapse:'collapse' }}>
-      <thead style={{ backgroundColor: "#f0f0f0", textAlign: "center", padding: "20px" }}>
+      <h1 className='hello'>View Volunteers</h1>
+      <table>
+      <thead>
         <tr>
           <>
           <th>Volunteer Name</th>
@@ -55,7 +57,6 @@ function ViewVolunteers() {
             <td>{request.volunteer.name}</td>
             <td>{request.volunteer.email}</td>
             </> }
-            
           </tr>
         ))}
       </tbody>

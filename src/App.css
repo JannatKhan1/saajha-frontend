@@ -1,5 +1,7 @@
 .App {
-  height: 100%;
-  width: 100%;
-  background-color: #F0F7EE;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F7EE; 
+  height: 100vh; 
+  overflow: auto;
 }

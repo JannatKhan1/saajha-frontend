@@ -6,12 +6,12 @@ function NGOCard ({ ngo }) {
   return (
     <div className="card-container">
       {ngo.image ?(
-        <img src={ngo.image} alt={`${ngo.name} - ${ngo.location}`} className="card-image-anika" />
+        <img src={ngo.image} alt={`${ngo.name} - ${ngo.location}`} className="image" />
       ):(
-        <img src={defaultImage} alt={`${ngo.name} - ${ngo.location}`} className="card-image-anika" />
-      )}  
+        <img src={defaultImage} alt={`${ngo.name} - ${ngo.location}`} className="image" />
+      )} 
+      <h1 className="title">Name: {ngo.name}</h1> 
       <div className="card-body">
-        <h1 className="card-title">Name: {ngo.name}</h1>
         <p className="card-description-anika">Location: {ngo.location}</p>
         <p className="card-description-anika">Services Offered: {ngo.services}</p>
         {ngo.employeeCount && <p className="card-description-anika">Employee Count: {ngo.employeeCount}</p>}

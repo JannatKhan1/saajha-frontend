@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { logoutCase } from '../../features/casee/caseSlice' 
 import '../../index.css'
+import '../../indexs.css'
 
 function CaseHeader() {
   const navigate = useNavigate()
@@ -18,13 +19,9 @@ function CaseHeader() {
         <Link to='/' className='nav-title'>
             Saajha
         </Link>
-        <ul>
-        <li>
-            <button className='btn btn-reverse' onClick={onLogout}>
+            <button className='logout' onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
-          </li>
-        </ul>
     </nav>
   )
 }
