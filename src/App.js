@@ -109,8 +109,8 @@ function App() {
           <Route path='/UpdateCounsellor/:counsellorId' element={<CounsellorRoute />}>
               <Route path='/UpdateCounsellor/:counsellorId' element={<UpdateCounsellor />} /> 
           </Route>
-          <Route path='/ViewCounsellor/:counsellorId' element={<CounsellorRoute />}>
-              <Route path='/ViewCounsellor/:counsellorId' element={<ViewCounsellor />} /> 
+          <Route path='/ViewCounsellor/' element={<CounsellorRoute />}>
+              <Route path='/ViewCounsellor/' element={<ViewCounsellor />} /> 
           </Route>
           <Route path='/UpdateCounsellor/:counsellorId' element={<CounsellorRoute />}>
                <Route path='/UpdateCounsellor/:counsellorId' element = {<UpdateCounsellor/>} /> 

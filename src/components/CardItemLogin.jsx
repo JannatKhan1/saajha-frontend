@@ -17,7 +17,7 @@ function CardItemLogin() {
       title: 'User',
       description: 'Can search for various NGOs and enroll patients in specific NGOs',
       loginbutton: 'Login',
-      loginButtonLink: '/UserLogin',
+      loginButtonLink: '/CaseLogin',
     },
     {
       icon: <MdVolunteerActivism />,
