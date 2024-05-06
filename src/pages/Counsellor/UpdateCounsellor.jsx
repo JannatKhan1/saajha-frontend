@@ -1,10 +1,11 @@
-//VERSION 4
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { Navbar } from '../../components/Navbar';
+import { useParams } from 'react-router-dom';
+import { updateCounsellor } from '../../features/counsellors/counsellorSlice';
 
 
 function UpdateCounsellor() {
@@ -19,6 +20,9 @@ function UpdateCounsellor() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // Version 4.1
+  const { counsellorId } = useParams()
+
   const onChange = (e) => {
     setFormData({
       ...formData,
@@ -26,14 +30,22 @@ function UpdateCounsellor() {
     });
   };
 
-  const onSubmit = (e) => {
+  // Version 4.1
+  const onSubmit = async (e) => {
     e.preventDefault();
-
-    const counsellorData = {
-      certification,
-      specialisation
-    };
-
+    try {
+      const response = await dispatch(updateCounsellor({ counsellorId, counsellorData: formData }));
+      if (response.payload.success) {
+        console.log('Counsellor Updated:', response.payload.data);
+        navigate('/CounsellorLanding');
+        toast.success('Counsellor Updated');
+      } else {
+        throw new Error(response.payload.error || 'Failed to update Counsellor');
+      }
+    } catch (error) {
+      console.error('Update Counsellor Error:', error.message);
+      toast.error('Failed to update Counsellor');
+    }
     
   };
 

@@ -112,6 +112,9 @@ function App() {
           <Route path='/ViewCounsellor/:counsellorId' element={<CounsellorRoute />}>
               <Route path='/ViewCounsellor/:counsellorId' element={<ViewCounsellor />} /> 
           </Route>
+          <Route path='/UpdateCounsellor/:counsellorId' element={<CounsellorRoute />}>
+               <Route path='/UpdateCounsellor/:counsellorId' element = {<UpdateCounsellor/>} /> 
+            </Route>
 
           {/* Counsellor-Case Routes */}
           <Route path='/CaseRegister' element={<CounsellorRoute />}>

@@ -38,14 +38,13 @@ export const logoutCounsellor = createAction('counsellor/logout', () => {
   return {}
 })
 
-// VERSION 4
 // Get Counsellor details
 export const getCounsellor = createAsyncThunk(
   'counsellor/get',
-  async (counsellorId, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().counsellors.counsellor.token
-      return await counsellorService.getCounsellor(counsellorId, token)
+      return await counsellorService.getCounsellor(token)
     } catch (error) {
       const message =
         (error.response &&
@@ -54,6 +53,26 @@ export const getCounsellor = createAsyncThunk(
         error.message ||
         error.toString()
 
+      return thunkAPI.rejectWithValue(message)
+    }
+  }
+)
+
+
+// Update Counsellor
+export const updateCounsellor = createAsyncThunk(
+  'counsellor/update',
+  async ({counsellorId, counsellorData}, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().counsellors.counsellor.token
+      return await counsellorService.updateCounsellor(counsellorId, counsellorData, token)
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
       return thunkAPI.rejectWithValue(message)
     }
   }
@@ -89,7 +108,6 @@ export const counsellorSlice = createSlice({
       .addCase(loginCounsellor.rejected, (state) => {
         state.isLoading = false
       })
-      // VERSION 4
       .addCase(getCounsellor.pending, (state) => {
         state.isLoading = true
       })
@@ -99,6 +117,20 @@ export const counsellorSlice = createSlice({
         state.counsellor = action.payload
       })
       .addCase(getCounsellor.rejected, (state, action) => {
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
+      })
+      .addCase(updateCounsellor.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(updateCounsellor.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.counsellor = action.payload;
+      })
+      
+      .addCase(updateCounsellor.rejected, (state, action) => {
         state.isLoading = false
         state.isError = true
         state.message = action.payload

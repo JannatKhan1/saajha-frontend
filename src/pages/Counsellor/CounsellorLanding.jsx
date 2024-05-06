@@ -17,7 +17,7 @@ function CounsellorLanding() {
               Update Your Details
         </Link>
 
-        <Link to={`/ViewCounsellor/${counsellorId}`} className='btn btn-reverse btn-sm'>
+        <Link to='/ViewCounsellor' className='btn btn-reverse btn-sm'>
           View Your Details
         </Link>
 

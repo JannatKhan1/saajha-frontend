@@ -34,13 +34,27 @@ const logoutCounsellor = () => localStorage.removeItem('counsellor')
 
 //View Counsellor Details
 
-const getCounsellor = async (counsellorId, token) => {
+const getCounsellor = async (token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   }
-  const response = await axios.get(API_URL + counsellorId, config)
+  const response = await axios.get(API_URL + '/me', config)
+  return response.data
+}
+
+
+// Update Counsellor
+const updateCounsellor = async (counsellorId, counsellorData, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+
+  const response = await axios.put(API_URL +'updateCounsellor/'+ counsellorId, counsellorData, config)
+
   return response.data
 }
 
@@ -49,6 +63,7 @@ const counsellorService = {
   logoutCounsellor,
   loginCounsellor,
   getCounsellor,
+  updateCounsellor,
 }
 
 export default counsellorService
