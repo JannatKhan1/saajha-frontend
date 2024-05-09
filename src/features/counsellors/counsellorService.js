@@ -30,7 +30,6 @@ const loginCounsellor = async (counsellorData) => {
 // Logout counsellor
 const logoutCounsellor = () => localStorage.removeItem('counsellor')
 
-//VERSION 4
 
 //View Counsellor Details
 
@@ -44,6 +43,17 @@ const getCounsellor = async (token) => {
   return response.data
 }
 
+//View Counsellors by Admin
+
+const getCounsellors = async (token,ngoId) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  const response = await axios.get(API_URL + 'adminView/'+ ngoId, config)
+  return response.data
+}
 
 // Update Counsellor
 const updateCounsellor = async (counsellorId, counsellorData, token) => {
@@ -64,6 +74,7 @@ const counsellorService = {
   loginCounsellor,
   getCounsellor,
   updateCounsellor,
+  getCounsellors,
 }
 
 export default counsellorService

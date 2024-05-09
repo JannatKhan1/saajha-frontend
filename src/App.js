@@ -35,6 +35,7 @@ import AddRemarks from './pages/Counsellor/AddRemarks'
 import UpdateCounsellor from './pages/Counsellor/UpdateCounsellor'
 import ViewCounsellor from './pages/Counsellor/ViewCounsellor';
 import ViewRemarks from './pages/Counsellor/ViewRemarks';
+import ViewCounsellors from './pages/Admin/ViewCounsellors';
 
 function App() {
   return (
@@ -100,6 +101,9 @@ function App() {
           <Route path='/CounsellorRegister' element={<AdminRoute />}>
               <Route path='/CounsellorRegister' element={<CounsellorRegister />} /> 
           </Route>
+          <Route path='/ViewCounsellors/' element={<AdminRoute />}>
+              <Route path='/ViewCounsellors/' element={<ViewCounsellors />} /> 
+            </Route>
           
           {/* Counsellor Routes */}
           <Route path='/CounsellorLogin' element={<CounsellorLogin/>} /> 

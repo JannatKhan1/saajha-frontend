@@ -194,13 +194,19 @@ function AdminLanding() {
                     { selectedButton !== "VIEW CASE" && selectedButton !== "VOLUNTEER" && selectedButton!=="NGO"  && (
                     <>
                         <>
+                        
                             <div>
                             <Link to='/CounsellorRegister' className='btn btn-reverse btn-sm'>
                                             Register Counsellor
                             </Link>
-                                <button onClick={() => handleButtonClick("view")}>View Counsellor</button>
+                            {filteredNGO.map(ngo => (
+                                <div key={ngo._id}>
+                            <Link to={`/ViewCounsellors/${ngo._id}`} className='btn btn-reverse btn-sm'>
+                                            View Counsellors
+                            </Link>
+                            </div> ))}
                             </div>
-        
+                             
                         </>
                   
                     </>)}

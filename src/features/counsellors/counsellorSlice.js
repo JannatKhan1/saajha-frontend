@@ -58,6 +58,26 @@ export const getCounsellor = createAsyncThunk(
   }
 )
 
+// Get Counsellor details
+export const getCounsellors = createAsyncThunk(
+  'counsellor/adminView',
+  async (ngoId, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().admins.admin.token
+      return await counsellorService.getCounsellor(ngoId,token)
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+
+      return thunkAPI.rejectWithValue(message)
+    }
+  }
+)
+
 
 // Update Counsellor
 export const updateCounsellor = createAsyncThunk(
@@ -131,6 +151,19 @@ export const counsellorSlice = createSlice({
       })
       
       .addCase(updateCounsellor.rejected, (state, action) => {
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
+      })
+      .addCase(getCounsellors.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(getCounsellors.fulfilled, (state, action) => {
+        state.isLoading = false
+        state.isSuccess = true
+        state.counsellor = action.payload
+      })
+      .addCase(getCounsellors.rejected, (state, action) => {
         state.isLoading = false
         state.isError = true
         state.message = action.payload
